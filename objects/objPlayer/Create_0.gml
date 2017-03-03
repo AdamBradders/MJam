@@ -8,7 +8,7 @@ event_inherited();
 
 isWallJumpEnabled = false; //enable/disable wall jump functionality
 maxNumberAirJumps = 3; //maximum number of times you can jump/flap whatevs
-jumpCooldown = 1; //minimum time between jumps/air jumps
+jumpCooldown = 0.2; //minimum time between jumps/air jumps
 
 
 
@@ -23,6 +23,12 @@ jumpCooldown = 1; //minimum time between jumps/air jumps
 isRunning = false;
 isMoving = false;
 isFacingLeft = false;
+
+
+//Timer Assignments
+
+clingTimer = 0;
+jumpTimer = 1;
 
 // Movement ///////////////////////////////////////////////////////////////////
 

@@ -35,12 +35,15 @@ if ((!cRight && !cLeft) || onGround)
     sticking = false;
 }   
 
-// Cling to wall
-if (((kRight && cLeft) || (kLeft && cRight)) && canStick && !onGround) 
+if (isWallJumpEnabled)
 {
-    alarm[0] = clingTime;
-    sticking = true; 
-    canStick = false;       
+	// Cling to wall
+	if (((kRight && cLeft) || (kLeft && cRight)) && canStick && !onGround) 
+	{
+	    alarm[clingTimer] = clingTime;
+	    sticking = true; 
+	    canStick = false;       
+	}
 }
 
 // Handle gravity
@@ -131,19 +134,18 @@ if (kJump) // Jump
         vy = -jumpHeight;
 		draw_yscale = 1.5;
 		draw_xscale = 0.75;
-		alarm[0] = jumpCooldown;
+		alarm[jumpTimer] = jumpCooldown;
 	}
-	else if (!onGround && numberAirJumps < maxNumberAirJumps && alarm[0] <= 0)
+	else if (!onGround && numberAirJumps < maxNumberAirJumps && alarm[jumpTimer] <= 0)
 	{
 		//We can air jump, so do it!
 		vy = -jumpHeight;
 		draw_yscale = 1.5;
 		draw_xscale = 0.75;
-		alarm[0] = jumpCooldown;
+		alarm[jumpTimer] = jumpCooldown;
 		numberAirJumps++;
 	}
-    
-} 
+}
 else if (kJumpRelease)  // Variable jumping
 { 
     if (vy < 0)
@@ -159,6 +161,9 @@ draw_yscale = lerp(draw_yscale, 1, 0.2);
 
 if (onGround && !wasOnGround)
 {
+	//reset air jumping
+	numberAirJumps = 0;
+	
 	//Do the skewing effect for landing
 	draw_yscale = 0.75;
 	draw_xscale = 1.25;
