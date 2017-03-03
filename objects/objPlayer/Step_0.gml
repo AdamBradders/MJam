@@ -132,16 +132,16 @@ if (kJump) // Jump
     if (onGround)
 	{
         vy = -jumpHeight;
-		draw_yscale = 1.5;
-		draw_xscale = 0.75;
+		draw_yscale = onJumpYSquish;
+		draw_xscale = onJumpXSquish;
 		alarm[jumpTimer] = jumpCooldown;
 	}
 	else if (!onGround && numberAirJumps < maxNumberAirJumps && alarm[jumpTimer] <= 0)
 	{
 		//We can air jump, so do it!
 		vy = -jumpHeight;
-		draw_yscale = 1.5;
-		draw_xscale = 0.75;
+		draw_yscale = onAirJumpYSquish;
+		draw_xscale = onAirJumpXSquish;
 		alarm[jumpTimer] = jumpCooldown;
 		numberAirJumps++;
 	}
@@ -165,11 +165,36 @@ if (onGround && !wasOnGround)
 	numberAirJumps = 0;
 	
 	//Do the skewing effect for landing
-	draw_yscale = 0.75;
-	draw_xscale = 1.25;
+	draw_yscale = onLandingYSquish;
+	draw_xscale = onLandingXSquish;
 }
 
 //image_xskew = lerp(image_xskew,0,0.1);
 //image_yskew = lerp(image_yskew,0,0.1);
 
+///////////////////////////////////////////////////////////////
+//Animations///////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
 
+if (onGround)
+{
+	if (isRunning)
+	{
+		sprite_index = isFacingLeft ? spriteRunningLeft : spriteRunningRight;
+	}
+	else
+	{
+		sprite_index = isFacingLeft ? spriteIdleLeft : spriteIdleRight;
+	}
+}
+else
+{
+	if (vy <= 0)
+	{
+		sprite_index = spriteJump;
+	}
+	else
+	{
+		sprite_index = isFacingLeft ? spriteFallLeft : spriteFallRight;
+	}
+}
