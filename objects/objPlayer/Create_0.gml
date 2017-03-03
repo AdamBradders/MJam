@@ -32,3 +32,11 @@ sqrt2 = sqrt(2);
 
 isRunning = false;
 isMoving = false;
+
+//Skewing
+
+draw_xscale = 1;
+draw_yscale = 1;
+
+image_xskew = 0;
+image_yskew = 0;

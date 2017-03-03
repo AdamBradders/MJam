@@ -4,7 +4,7 @@
     "mvc": "1.1",
     "name": "31d9e483-5340-43df-a49c-0ec5dfea4632",
     "children": [
-        "0f96cdd3-0891-487a-83d4-c32d63b923a9"
+        "4e70997b-0806-46f8-9249-d2e5b7e26b99"
     ],
     "filterType": "GMObject",
     "folderName": "World",

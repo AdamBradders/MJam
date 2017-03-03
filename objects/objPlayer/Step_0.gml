@@ -94,13 +94,32 @@ if (kJump && cRight && !onGround) {
         vx = -vxMax;
     }  
 }
- 
+
 // Jump 
 if (kJump) { 
     if (onGround)
+	{
         vy = -jumpHeight;
+		draw_yscale = 1.5;
+		draw_xscale = 0.75;
+	}
     // Variable jumping
 } else if (kJumpRelease) { 
     if (vy < 0)
         vy *= 0.25;
 }
+
+draw_xscale = lerp(draw_xscale, 1, 0.2);
+draw_yscale = lerp(draw_yscale, 1, 0.2);
+
+if (onGround && !wasOnGround)
+{
+	//Do the skewing effect for landing
+	draw_yscale = 0.75;
+	draw_xscale = 1.25;
+}
+
+//image_xskew = lerp(image_xskew,0,0.1);
+//image_yskew = lerp(image_yskew,0,0.1);
+
+

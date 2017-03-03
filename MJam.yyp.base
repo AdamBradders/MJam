@@ -111,14 +111,6 @@
             }
         },
         {
-            "Key": "4e70997b-0806-46f8-9249-d2e5b7e26b99",
-            "Value": {
-                "id": "96caefd6-57b4-41f7-bf8c-353eec7039af",
-                "resourcePath": "objects\\objGroundNormal\\objGroundNormal.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "4fe93952-a756-4606-a9a5-00e18014eb06",
             "Value": {
                 "id": "869b630c-83cf-4935-970e-b4503bbc13dc",
@@ -135,11 +127,11 @@
             }
         },
         {
-            "Key": "60e40456-75a5-4033-8000-d5bcce8c3f9a",
+            "Key": "5d214e1f-08da-4f1e-ad8c-5319c5bede3e",
             "Value": {
-                "id": "5306964b-eea8-455c-9b39-ad9046766a60",
-                "resourcePath": "scripts\\draw_sprite_skew_ext\\draw_sprite_skew_ext.yy",
-                "resourceType": "GMScript"
+                "id": "0b44c606-d952-4a26-93f0-3166b3851b16",
+                "resourcePath": "sprites\\sprTileTest\\sprTileTest.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -172,14 +164,6 @@
                 "id": "d43cceca-e567-4155-9651-230fecc52452",
                 "resourcePath": "scripts\\OnGround\\OnGround.yy",
                 "resourceType": "GMScript"
-            }
-        },
-        {
-            "Key": "83656c93-8bfe-4f34-a68e-2209e7e00231",
-            "Value": {
-                "id": "4c2ca457-ac6e-4613-ad30-07a3f0524beb",
-                "resourcePath": "views\\83656c93-8bfe-4f34-a68e-2209e7e00231.yy",
-                "resourceType": "GMFolder"
             }
         },
         {
@@ -279,6 +263,14 @@
             }
         },
         {
+            "Key": "df807aea-224a-4fdc-9ab2-e7969759afda",
+            "Value": {
+                "id": "ca9d687f-8cf2-4d6d-a1e7-6bd81c0a6f51",
+                "resourcePath": "tilesets\\tileset_test\\tileset_test.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "e7cc5df1-f48b-4630-90b0-1ecb12c317d4",
             "Value": {
                 "id": "5d905b3c-aaa0-4ee8-8d16-ec0e7408b84f",
@@ -337,8 +329,7 @@
     ],
     "script_order": [
         "8f617633-1763-42d3-9220-4e0607ac91c0",
-        "7d9f8383-ecfb-4822-9b65-d7d701364b4c",
-        "60e40456-75a5-4033-8000-d5bcce8c3f9a"
+        "7d9f8383-ecfb-4822-9b65-d7d701364b4c"
     ],
     "tutorial": ""
 }
