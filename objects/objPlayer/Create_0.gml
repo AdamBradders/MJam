@@ -35,4 +35,8 @@ isMoving = false;
 
 //Skewing
 
-jumpBounce = 0;
+draw_xscale = 1;
+draw_yscale = 1;
+
+image_xskew = 0;
+image_yskew = 0;
