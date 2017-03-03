@@ -13,7 +13,7 @@ event_inherited();
 isWallJumpEnabled = false; //enable/disable wall jump functionality
 maxNumberAirJumps = 3; //maximum number of times you can jump/flap whatevs
 jumpCooldown = 0.1 * room_speed; //minimum time between jumps/air jumps
-flyingTime = 1.0 * room_speed;
+flyingTime = 3 * room_speed;
 
 //Squishes
 onLandingXSquish = 1.25;
@@ -37,11 +37,11 @@ vyMax       = 10.0 * m;
 jumpHeight  = 12.0  * m;
 gravNorm    = 0.5  * m;
 gravSlide   = 0.25 * m; 
-rotationRate = 3 * m;
-flyingAccel = 0.4 * m;
+rotationRate = 5 * m;
+flyingAccel = 0.8 * m;
 flyingFric = 0.1 * m;
-vxFlyingMax = 10.0  * m;
-vyFlyingMax = 10.0 * m;
+vxFlyingMax = 7.0  * m;
+vyFlyingMax = 7.0 * m;
 clingTime   = 4.0 * room_speed * m;
 
 ////////////////////////////////////////////////////////////////////////////////////////

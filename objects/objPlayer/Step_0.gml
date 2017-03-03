@@ -262,7 +262,9 @@ else
 	else
 	{
 		sprite_index = isFacingLeft ? spriteFallLeft : spriteFallRight;
+		angle = 0
 	}
+	
 }
 
 //breathing animation
