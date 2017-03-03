@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "4a4ec181-0c0a-4e41-938f-02df023d817e",
+            "Value": {
+                "id": "671e3111-932c-427a-a101-b48b99eb306d",
+                "resourcePath": "views\\4a4ec181-0c0a-4e41-938f-02df023d817e.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "4cb440af-4169-400e-bf61-a32413d45220",
             "Value": {
                 "id": "fbf05a1c-0de1-4918-9b5a-9b11e3fbc517",
@@ -188,6 +196,14 @@
                 "id": "d43cceca-e567-4155-9651-230fecc52452",
                 "resourcePath": "scripts\\OnGround\\OnGround.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "7dee387e-d3c3-4ec5-95dc-021e96d0a517",
+            "Value": {
+                "id": "d06a9709-ce90-40fc-b61a-93b51449c1a6",
+                "resourcePath": "sprites\\sprFlightEnergyBar\\sprFlightEnergyBar.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
