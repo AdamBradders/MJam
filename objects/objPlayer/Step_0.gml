@@ -46,12 +46,16 @@ if (!onGround) {
     }
 }
 
+isRunning = false;
+
 // Left 
 if (kLeft && !kRight && !sticking) {
     // Apply acceleration left
     if (vx > 0)
         vx = Approach(vx, 0, tempFric);   
     vx = Approach(vx, -vxMax, tempAccel);
+	
+	isRunning = true;
 }
 
 // Right 
@@ -60,7 +64,11 @@ if (kRight && !kLeft && !sticking) {
     if (vx < 0)
         vx = Approach(vx, 0, tempFric);   
     vx = Approach(vx, vxMax, tempAccel);
+	
+	isRunning = true;
 }
+
+isMoving = abs(vx) > 0;
 
 // Friction
 if (!kRight && !kLeft)

@@ -27,3 +27,8 @@ cRight = place_meeting(x + 1, y, objSolid);
 
 // Common calculation
 sqrt2 = sqrt(2);
+
+//Character logic
+
+isRunning = false;
+isMoving = false;
