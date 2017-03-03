@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "8289ef79-ece4-4fb5-8da5-a5dd16c4cf12",
+            "Value": {
+                "id": "47adffaf-c565-4f49-b973-1c15a2ee134a",
+                "resourcePath": "sprites\\sprPlaceholdIdle\\sprPlaceholdIdle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8f617633-1763-42d3-9220-4e0607ac91c0",
             "Value": {
                 "id": "21247477-12a2-43a7-85dd-2c6ca2eff223",
