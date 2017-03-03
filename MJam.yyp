@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "008d9d79-d1c9-4d3b-bad2-6278798f0da9",
+            "Value": {
+                "id": "d41c178a-dfce-4e29-ad7d-0e74dd7e6493",
+                "resourcePath": "sprites\\sprFlying\\sprFlying.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "04ec71eb-0348-4289-aa2a-6219f558b163",
             "Value": {
                 "id": "e7c3d82e-7273-40f1-a7c6-ca5f4231c8de",
