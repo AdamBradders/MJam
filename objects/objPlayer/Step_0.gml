@@ -264,3 +264,13 @@ else
 		sprite_index = isFacingLeft ? spriteFallLeft : spriteFallRight;
 	}
 }
+
+//breathing animation
+
+draw_xscale +=  breathingAmplitudeX * sin(degtorad(breathingSinAngle));
+draw_yscale +=  breathingAmplitudeY * sin(degtorad(breathingSinAngle));
+breathingSinAngle += breathingRate;
+if (breathingSinAngle > 360)
+{
+	breathingSinAngle -= 360;
+}
