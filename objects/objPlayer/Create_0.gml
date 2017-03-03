@@ -12,7 +12,9 @@ event_inherited();
 
 isWallJumpEnabled = false; //enable/disable wall jump functionality
 maxNumberAirJumps = 3; //maximum number of times you can jump/flap whatevs
-jumpCooldown = 0.2; //minimum time between jumps/air jumps
+jumpCooldown = 0.1 * room_speed; //minimum time between jumps/air jumps
+flyingTime = 1.0 * room_speed;
+
 
 //Squishes
 onLandingXSquish = 1.25;
@@ -36,8 +38,12 @@ vyMax       = 10.0 * m;
 jumpHeight  = 12.0  * m;
 gravNorm    = 0.5  * m;
 gravSlide   = 0.25 * m; 
-
-clingTime   = 4.0 * m;
+rotationRate = 3 * m;
+flyingAccel = 0.4 * m;
+flyingFric = 0.1 * m;
+vxFlyingMax = 10.0  * m;
+vyFlyingMax = 10.0 * m;
+clingTime   = 4.0 * room_speed * m;
 
 ////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -51,6 +57,7 @@ clingTime   = 4.0 * m;
 isRunning = false;
 isMoving = false;
 isFacingLeft = false;
+isFlying = false;
 
 //Animations
 
@@ -66,6 +73,7 @@ spriteFallRight = sprPlayerFallRight;
 
 clingTimer = 0;
 jumpTimer = 1;
+flyingTimer = 2;
 
 // Misc ///////////////////////////////////////////////////////////////////////
 
@@ -79,6 +87,9 @@ sqrt2 = sqrt(2);
 //air jumps
 
 numberAirJumps = 0;
+
+//flying shiz
+angle = 0;
 
 //Skewing
 

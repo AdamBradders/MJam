@@ -47,7 +47,7 @@ if (isWallJumpEnabled)
 }
 
 // Handle gravity
-if (!onGround) 
+if (!onGround && !isFlying) 
 {
     if ((cLeft || cRight) && vy >= 0) 
 	{
@@ -64,10 +64,17 @@ isRunning = false;
 // Left 
 if (kLeft && !kRight && !sticking) 
 {
-    // Apply acceleration left
-    if (vx > 0)
-        vx = Approach(vx, 0, tempFric);   
-    vx = Approach(vx, -vxMax, tempAccel);
+	if (isFlying)
+	{
+		angle = (angle + rotationRate);
+	}
+	else
+	{
+	    // Apply acceleration left
+	    if (vx > 0)
+	        vx = Approach(vx, 0, tempFric);   
+	    vx = Approach(vx, -vxMax, tempAccel);
+	}
 	
 	isFacingLeft = true;
 	isRunning = true;
@@ -76,15 +83,32 @@ if (kLeft && !kRight && !sticking)
 // Right 
 if (kRight && !kLeft && !sticking) 
 {
-    // Apply acceleration right
-    if (vx < 0)
+	if (isFlying)
 	{
-        vx = Approach(vx, 0, tempFric);   
+		angle = (angle - rotationRate);
+		
 	}
-    vx = Approach(vx, vxMax, tempAccel);
-
+	else
+	{
+	    // Apply acceleration right
+	    if (vx < 0)
+		{
+	        vx = Approach(vx, 0, tempFric);   
+		}
+	    vx = Approach(vx, vxMax, tempAccel);
+	}
 	isFacingLeft = false;	
 	isRunning = true;
+}
+
+//Clamp the angle to 0->360 range
+if (angle < 0)
+{
+	angle += 360;
+}
+if (angle > 360)
+{
+	angle -= 360;
 }
 
 isMoving = abs(vx) > 0;
@@ -131,43 +155,85 @@ if (kJump) // Jump
 { 
     if (onGround)
 	{
+		isFlying = false;
         vy = -jumpHeight;
 		draw_yscale = onJumpYSquish;
 		draw_xscale = onJumpXSquish;
-		alarm[jumpTimer] = jumpCooldown;
 	}
-	else if (!onGround && numberAirJumps < maxNumberAirJumps && alarm[jumpTimer] <= 0)
+	else if (!onGround && numberAirJumps < maxNumberAirJumps && alarm[jumpTimer] < 0)
 	{
 		//We can air jump, so do it!
 		vy = -jumpHeight;
 		draw_yscale = onAirJumpYSquish;
 		draw_xscale = onAirJumpXSquish;
-		alarm[jumpTimer] = jumpCooldown;
+		
 		numberAirJumps++;
+		isFlying = true;
+		alarm[flyingTimer] = flyingTime;
 	}
+	show_debug_message("JUMP, double jumps now " + string(numberAirJumps));
 }
-else if (kJumpRelease)  // Variable jumping
+else if (kJumpRelease && numberAirJumps == maxNumberAirJumps)  // Variable jumping
 { 
+	alarm[jumpTimer] = jumpCooldown;
     if (vy < 0)
 	{
         vy *= 0.25;
 	}
+	isFlying = false;
 }
-
-
+else if (kJumpRelease)
+{
+	alarm[jumpTimer] = jumpCooldown;
+	//Stop rotating
+	isFlying = false;
+}
 
 draw_xscale = lerp(draw_xscale, 1, 0.2);
 draw_yscale = lerp(draw_yscale, 1, 0.2);
 
-if (onGround && !wasOnGround)
+if (alarm[flyingTimer] < 0 && isFlying)
 {
+	isFlying = false;
+}
+
+if (onGround)
+{
+	show_debug_message("LANDED");
 	//reset air jumping
 	numberAirJumps = 0;
-	
+	//reset flying
+	isFlying = false;
+	//reset our facing angle to straight up
+	angle = 0;
+}
+
+if (onGround && !wasOnGround)
+{
 	//Do the skewing effect for landing
 	draw_yscale = onLandingYSquish;
 	draw_xscale = onLandingXSquish;
 }
+
+
+//flying thrust
+if (isFlying)
+{
+	//vx = Approach(vx, vxFlyingMax * -sin(degtorad(angle)), flyingAccel);
+	//vy = Approach(vy, vyFlyingMax * -cos(degtorad(angle)), flyingAccel);
+	vx -= flyingAccel * sin(degtorad(angle));
+	vy -= flyingAccel * cos(degtorad(angle));
+	velocityMagnitude = sqrt(vx*vx + vy*vy);
+	if (velocityMagnitude > vxFlyingMax)
+	{
+		vx = vx/velocityMagnitude;
+		vy = vy/velocityMagnitude;
+		
+		vx *= vxFlyingMax;
+		vy *= vxFlyingMax;
+	}
+}
+
 
 //image_xskew = lerp(image_xskew,0,0.1);
 //image_yskew = lerp(image_yskew,0,0.1);
@@ -189,7 +255,7 @@ if (onGround)
 }
 else
 {
-	if (vy <= 0)
+	if (vy <= 0 || isFlying)
 	{
 		sprite_index = spriteJump;
 	}
