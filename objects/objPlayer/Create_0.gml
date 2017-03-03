@@ -2,36 +2,28 @@
 event_inherited();
 
 
-
-
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//EVERYTHING IN HERE YOU CAN EDIT, MIKEY MAN
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 //Character logic for Mike to fuck with
 
 isWallJumpEnabled = false; //enable/disable wall jump functionality
 maxNumberAirJumps = 3; //maximum number of times you can jump/flap whatevs
 jumpCooldown = 0.2; //minimum time between jumps/air jumps
 
+//Squishes
+onLandingXSquish = 1.25;
+onLandingYSquish = 0.75;
+onJumpXSquish = 0.75;
+onJumpYSquish = 1.5;
+onAirJumpXSquish = 0.5;
+onAirJumpYSquish = 2.0;
 
 
-
-
-
-
-
-
-//These are 'getable' - don't change them here!
-//YOU HEAR ME, CUNT? DON'T FUCKING CHANGE THESE.
-isRunning = false;
-isMoving = false;
-isFacingLeft = false;
-
-
-//Timer Assignments
-
-clingTimer = 0;
-jumpTimer = 1;
-
-// Movement ///////////////////////////////////////////////////////////////////
-
+//Movement stuff
 // Multiplier
 m = 1.0;
 
@@ -41,11 +33,39 @@ airAccel    = 0.75 * m;
 airFric     = 0.1  * m;
 vxMax       = 6.5  * m;
 vyMax       = 10.0 * m;
-jumpHeight  = 8.0  * m;
+jumpHeight  = 12.0  * m;
 gravNorm    = 0.5  * m;
 gravSlide   = 0.25 * m; 
 
 clingTime   = 4.0 * m;
+
+////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//EVERYTHING BELOW HERE YOU CAN'T EDIT. WELL YOU CAN, BUT AT YOUR OWN RISK, YO.
+
+//These are 'getable' - don't change them here!
+//YOU HEAR ME, CUNT? DON'T FUCKING CHANGE THESE.
+isRunning = false;
+isMoving = false;
+isFacingLeft = false;
+
+//Animations
+
+spriteIdleLeft = sprPlayerIdleLeft;
+spriteIdleRight = sprPlayerIdleRight;
+spriteRunningLeft = sprPlayerRunLeft;
+spriteRunningRight = sprPlayerRunRight;
+spriteJump = sprPlayerJump;
+spriteFallLeft = sprPlayerFallLeft;
+spriteFallRight = sprPlayerFallRight;
+
+//Timer Assignments
+
+clingTimer = 0;
+jumpTimer = 1;
 
 // Misc ///////////////////////////////////////////////////////////////////////
 
