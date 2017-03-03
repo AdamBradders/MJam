@@ -1,4 +1,11 @@
-// Inherit oParEntity variables
+global.playerInstance = id;
+
+energyBarXOffset = 0;
+energyBarYOffset = -40;
+
+energyBar = instance_create_layer(x+energyBarXOffset,y+energyBarYOffset,"Instances",objEnergyBar);
+
+// Inherit objEntity variables
 event_inherited();
 
 
@@ -11,9 +18,13 @@ event_inherited();
 //Character logic for Mike to fuck with
 
 isWallJumpEnabled = false; //enable/disable wall jump functionality
-maxNumberAirJumps = 3; //maximum number of times you can jump/flap whatevs
 jumpCooldown = 0.1 * room_speed; //minimum time between jumps/air jumps
 flyingTime = 3 * room_speed;
+maxEnergy = 100;
+energy = maxEnergy;
+flapEnergyUse = 25; //amount of energy used to perform a flap
+minAirJumpEnergy = flapEnergyUse; //minimum energy required to perform a flap
+flyingEnergyDrainRate = 0.3; //energy use per frame to sustain flying
 
 //Squishes
 onLandingXSquish = 1.25;

@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "105fc8ff-f8ac-4576-8c3c-8468ac0b441f",
+            "Value": {
+                "id": "41f6cdf2-7186-44a6-80bb-9ab1e461d589",
+                "resourcePath": "objects\\objEnergyBar\\objEnergyBar.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "20cd299d-3c1e-44c8-b432-150afb24bb5e",
             "Value": {
                 "id": "aca29ac7-1f49-4356-9f1e-f48f21835588",
