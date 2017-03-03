@@ -1,6 +1,5 @@
 // Input //////////////////////////////////////////////////////////////////////
 
-
 var kLeft, kRight, kUp, kDown, kJump, kJumpRelease, tempAccel, tempFric;
 
 kLeft        = keyboard_check(vk_left);
@@ -13,31 +12,42 @@ kJumpRelease = keyboard_check_released(vk_space);
 
 // Movement ///////////////////////////////////////////////////////////////////
 
+//Relative collision checks
+cLeft  = place_meeting(x - 1, y, objSolid);
+cRight = place_meeting(x + 1, y, objSolid);
+
 // Apply the correct form of acceleration and friction
-if (onGround) {
+if (onGround) 
+{
     tempAccel = groundAccel;
     tempFric  = groundFric;
-} else {
+} 
+else 
+{
     tempAccel = airAccel;
     tempFric  = airFric;
 }
 
 // Reset wall cling
-if ((!cRight && !cLeft) || onGround) {
+if ((!cRight && !cLeft) || onGround) 
+{
     canStick = true;
     sticking = false;
 }   
 
 // Cling to wall
-if (((kRight && cLeft) || (kLeft && cRight)) && canStick && !onGround) {
+if (((kRight && cLeft) || (kLeft && cRight)) && canStick && !onGround) 
+{
     alarm[0] = clingTime;
     sticking = true; 
     canStick = false;       
 }
 
 // Handle gravity
-if (!onGround) {
-    if ((cLeft || cRight) && vy >= 0) {
+if (!onGround) 
+{
+    if ((cLeft || cRight) && vy >= 0) 
+	{
         // Wall slide
         vy = Approach(vy, vyMax, gravSlide);
     } else {
@@ -49,22 +59,28 @@ if (!onGround) {
 isRunning = false;
 
 // Left 
-if (kLeft && !kRight && !sticking) {
+if (kLeft && !kRight && !sticking) 
+{
     // Apply acceleration left
     if (vx > 0)
         vx = Approach(vx, 0, tempFric);   
     vx = Approach(vx, -vxMax, tempAccel);
 	
+	isFacingLeft = true;
 	isRunning = true;
 }
 
 // Right 
-if (kRight && !kLeft && !sticking) {
+if (kRight && !kLeft && !sticking) 
+{
     // Apply acceleration right
     if (vx < 0)
+	{
         vx = Approach(vx, 0, tempFric);   
+	}
     vx = Approach(vx, vxMax, tempAccel);
-	
+
+	isFacingLeft = false;	
 	isRunning = true;
 }
 
@@ -72,42 +88,71 @@ isMoving = abs(vx) > 0;
 
 // Friction
 if (!kRight && !kLeft)
+{
     vx = Approach(vx, 0, tempFric); 
+}
         
 // Wall jump
-if (kJump && cLeft && !onGround) {
-    if (kLeft) {
-        vy = -jumpHeight * 1.1;
-        vx =  jumpHeight * .75;
-    } else {
-        vy = -jumpHeight * 1.1;
-        vx =  vxMax;
-    }  
+if (isWallJumpEnabled)
+{
+	if (kJump && cLeft && !onGround) 
+	{
+	    if (kLeft) 
+		{
+	        vy = -jumpHeight * 1.1;
+	        vx =  jumpHeight * .75;
+	    } 
+		else 
+		{
+	        vy = -jumpHeight * 1.1;
+	        vx =  vxMax;
+	    }  
+	}
+
+	if (kJump && cRight && !onGround) 
+	{
+	    if (kRight) 
+		{
+	        vy = -jumpHeight * 1.1;
+	        vx = -jumpHeight * .75;
+	    } 
+		else 
+		{
+	        vy = -jumpHeight * 1.1;
+	        vx = -vxMax;
+	    }  
+	}
 }
 
-if (kJump && cRight && !onGround) {
-    if (kRight) {
-        vy = -jumpHeight * 1.1;
-        vx = -jumpHeight * .75;
-    } else {
-        vy = -jumpHeight * 1.1;
-        vx = -vxMax;
-    }  
-}
-
-// Jump 
-if (kJump) { 
+if (kJump) // Jump 
+{ 
     if (onGround)
 	{
         vy = -jumpHeight;
 		draw_yscale = 1.5;
 		draw_xscale = 0.75;
+		alarm[0] = jumpCooldown;
 	}
-    // Variable jumping
-} else if (kJumpRelease) { 
+	else if (!onGround && numberAirJumps < maxNumberAirJumps && alarm[0] <= 0)
+	{
+		//We can air jump, so do it!
+		vy = -jumpHeight;
+		draw_yscale = 1.5;
+		draw_xscale = 0.75;
+		alarm[0] = jumpCooldown;
+		numberAirJumps++;
+	}
+    
+} 
+else if (kJumpRelease)  // Variable jumping
+{ 
     if (vy < 0)
+	{
         vy *= 0.25;
+	}
 }
+
+
 
 draw_xscale = lerp(draw_xscale, 1, 0.2);
 draw_yscale = lerp(draw_yscale, 1, 0.2);

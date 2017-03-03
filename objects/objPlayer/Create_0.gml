@@ -2,6 +2,28 @@
 event_inherited();
 
 
+
+
+//Character logic for Mike to fuck with
+
+isWallJumpEnabled = false; //enable/disable wall jump functionality
+maxNumberAirJumps = 3; //maximum number of times you can jump/flap whatevs
+jumpCooldown = 1; //minimum time between jumps/air jumps
+
+
+
+
+
+
+
+
+
+//These are 'getable' - don't change them here!
+//YOU HEAR ME, CUNT? DON'T FUCKING CHANGE THESE.
+isRunning = false;
+isMoving = false;
+isFacingLeft = false;
+
 // Movement ///////////////////////////////////////////////////////////////////
 
 // Multiplier
@@ -28,10 +50,9 @@ cRight = place_meeting(x + 1, y, objSolid);
 // Common calculation
 sqrt2 = sqrt(2);
 
-//Character logic
+//air jumps
 
-isRunning = false;
-isMoving = false;
+numberAirJumps = 0;
 
 //Skewing
 
