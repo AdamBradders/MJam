@@ -15,7 +15,6 @@ maxNumberAirJumps = 3; //maximum number of times you can jump/flap whatevs
 jumpCooldown = 0.1 * room_speed; //minimum time between jumps/air jumps
 flyingTime = 3 * room_speed;
 
-
 //Squishes
 onLandingXSquish = 1.25;
 onLandingYSquish = 0.75;
@@ -98,3 +97,9 @@ draw_yscale = 1;
 
 image_xskew = 0;
 image_yskew = 0;
+
+//Breathing animation
+breathingAmplitudeY = 0.01;
+breathingAmplitudeX = 0.00;
+breathingSinAngle = 0;
+breathingRate = 10;
