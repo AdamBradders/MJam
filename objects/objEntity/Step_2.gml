@@ -17,3 +17,5 @@ repeat(abs(vx)) {
         break;
     }
 }
+
+wasOnGround = onGround;

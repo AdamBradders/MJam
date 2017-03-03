@@ -104,3 +104,10 @@ if (kJump) {
     if (vy < 0)
         vy *= 0.25;
 }
+
+if (onGround && !wasOnGround)
+{
+	//Do the skewing effect for landing
+	jumpBounce = 1;
+}
+

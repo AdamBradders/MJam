@@ -32,3 +32,7 @@ sqrt2 = sqrt(2);
 
 isRunning = false;
 isMoving = false;
+
+//Skewing
+
+jumpBounce = 0;
