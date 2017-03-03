@@ -1,5 +1,11 @@
 // Input //////////////////////////////////////////////////////////////////////
 
+if (energyBar)
+{
+	energyBar.x = x + energyBarXOffset;
+	energyBar.y = y + energyBarYOffset;
+}
+
 var kLeft, kRight, kUp, kDown, kJump, kJumpRelease, tempAccel, tempFric;
 
 kLeft        = keyboard_check(vk_left);
@@ -160,7 +166,7 @@ if (kJump) // Jump
 		draw_yscale = onJumpYSquish;
 		draw_xscale = onJumpXSquish;
 	}
-	else if (!onGround && numberAirJumps < maxNumberAirJumps && alarm[jumpTimer] < 0)
+	else if (!onGround && alarm[jumpTimer] < 0 && energy >= minAirJumpEnergy)
 	{
 		//We can air jump, so do it!
 		vy = -jumpHeight;
@@ -169,11 +175,10 @@ if (kJump) // Jump
 		
 		numberAirJumps++;
 		isFlying = true;
-		alarm[flyingTimer] = flyingTime;
+		energy -= flapEnergyUse;
 	}
-	show_debug_message("JUMP, double jumps now " + string(numberAirJumps));
 }
-else if (kJumpRelease && numberAirJumps == maxNumberAirJumps)  // Variable jumping
+else if (kJumpRelease && numberAirJumps == 0)  // Variable jumping
 { 
 	alarm[jumpTimer] = jumpCooldown;
     if (vy < 0)
@@ -192,14 +197,13 @@ else if (kJumpRelease)
 draw_xscale = lerp(draw_xscale, 1, 0.2);
 draw_yscale = lerp(draw_yscale, 1, 0.2);
 
-if (alarm[flyingTimer] < 0 && isFlying)
-{
-	isFlying = false;
-}
+//if (alarm[flyingTimer] < 0 && isFlying)
+//{
+//	isFlying = false;
+//}
 
 if (onGround)
 {
-	show_debug_message("LANDED");
 	//reset air jumping
 	numberAirJumps = 0;
 	//reset flying
@@ -232,6 +236,19 @@ if (isFlying)
 		vx *= vxFlyingMax;
 		vy *= vxFlyingMax;
 	}
+	
+	//energy bar drop
+	energy -= flyingEnergyDrainRate;
+	if (energy < 0) //lerping error?
+	{
+		energy = 0;
+	}
+}
+
+if (energy <= 0)
+{
+	energy = 0;
+	isFlying = false;
 }
 
 
@@ -244,6 +261,7 @@ if (isFlying)
 
 if (onGround)
 {
+	energy = maxEnergy;
 	if (isRunning)
 	{
 		sprite_index = isFacingLeft ? spriteRunningLeft : spriteRunningRight;
