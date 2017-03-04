@@ -320,7 +320,7 @@ if (onGround)
 	if (wasFlying)
 	{
 		//At this point we change our position to reflect that sprFlying has a different pivot
-		y -= 16;
+		y += 15;
 	}	
 	energy = maxEnergy;
 	if (isRunning)
