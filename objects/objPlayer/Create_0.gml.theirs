@@ -1,4 +1,4 @@
-characterCollisionSize = 11;
+characterCollisionSize = 16;
 
 energyBarXOffset = 0;
 energyBarYOffset = -40;
@@ -26,16 +26,14 @@ minAirJumpEnergy = flapEnergyUse; //minimum energy required to perform a flap
 flyingEnergyDrainRate = 0.8; //energy use per frame to sustain flying
 shootingRecoilGround = 5;
 shootingRecoilJump = 1;
-shootingRecoilFlying = 0.1;
+shootingRecoilFlying = 5;
 shootingRecoilShootDown = -1.5;
 
 //Shooting vars
 shootingCooldown = 0.02;
-shootingRapidFireCooldown = 3;
 shootingMaxChargeTime = 1 * room_speed;
 shootingChargedProjectileCount = 6;
 shootingChargedProjectileSpreadAngle = 40;
-shootingRapidFireSpreadAngle = 10;
 
 //Squishes
 onLandingXSquish = 2;
@@ -80,8 +78,6 @@ isFacingLeft = false;
 isFlying = false;
 wasFlying = false; //were we flying on the previous frame? by comparing with isFlying you can tell if we just started
 isChargingShoot = false;
-isRapidFiring = false;
-
 //Animations
 
 spriteIdleLeft = sprPlayerIdleLeft;
