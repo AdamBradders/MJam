@@ -309,7 +309,7 @@ if (onGround)
 	//reset flying
 	isFlying = false;
 	//reset our facing angle to straight up
-	angle = 0;
+	//angle = 0;
 }
 
 if (onGround && !wasOnGround)
