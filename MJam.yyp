@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "0eba1656-830f-4397-84b2-e1ab8b59a47a",
+            "Value": {
+                "id": "25a893f2-1894-4783-b295-e1b87f26fc62",
+                "resourcePath": "sprites\\sprWorldMiner\\sprWorldMiner.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0f96cdd3-0891-487a-83d4-c32d63b923a9",
             "Value": {
                 "id": "177c812b-16b2-4593-893e-4fbcc44ca639",
@@ -79,6 +87,14 @@
             }
         },
         {
+            "Key": "292e7ad7-f5ae-48e8-a5a0-031308333cb6",
+            "Value": {
+                "id": "1533f016-cb60-4281-bf8e-45b142355914",
+                "resourcePath": "rooms\\levelGeneratorTest\\levelGeneratorTest.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "31d9e483-5340-43df-a49c-0ec5dfea4632",
             "Value": {
                 "id": "2f004a6a-6ac1-4cdf-a1b8-32025d797097",
@@ -92,6 +108,14 @@
                 "id": "bf98071a-700a-4fa3-b5db-269e7836ae4e",
                 "resourcePath": "sprites\\sprPlayerFallLeft\\sprPlayerFallLeft.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "37e83c79-e605-4394-8b3a-881b1f5b872f",
+            "Value": {
+                "id": "c0307f43-9b49-492e-9e3b-8f364baa7fb6",
+                "resourcePath": "views\\37e83c79-e605-4394-8b3a-881b1f5b872f.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -303,6 +327,14 @@
             }
         },
         {
+            "Key": "b251c7dc-7c5f-46ac-8226-a4d764823c50",
+            "Value": {
+                "id": "33d650e4-fcac-479b-afe0-3ddba99cc822",
+                "resourcePath": "views\\b251c7dc-7c5f-46ac-8226-a4d764823c50.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "b3525b2b-16b4-408b-8094-9f13abec7b0a",
             "Value": {
                 "id": "98e17dde-5029-410b-92b5-a8729669f129",
@@ -404,6 +436,14 @@
                 "id": "836d2f36-2e2b-4db0-97bd-3be8e0acf1e5",
                 "resourcePath": "views\\ea88659c-9529-4ccc-96dc-a279fb3c15f2.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "ec321d60-b7a4-4d6a-9cf7-710c25f81921",
+            "Value": {
+                "id": "54b73cd5-5eb2-457a-864c-558c9a53ad4d",
+                "resourcePath": "objects\\objWorldMiner\\objWorldMiner.yy",
+                "resourceType": "GMObject"
             }
         },
         {

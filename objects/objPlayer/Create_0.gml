@@ -1,5 +1,3 @@
-global.playerInstance = id;
-
 energyBarXOffset = 0;
 energyBarYOffset = -40;
 
