@@ -16,5 +16,6 @@ if (isFacingLeft)
 		
 if (!onGround && isFlying)
 	{
-	bullet.angle = objPlayer.angle;
+	bullet.direction = objPlayer.angle;
 	}
+
