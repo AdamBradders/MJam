@@ -112,7 +112,7 @@ image_yskew = 0;
 
 //Breathing animation
 breathingAmplitudeYIdle = 0.01;
-breathingAmplitudeYRunning = 0.03;
+breathingAmplitudeYRunning = 0.06;
 breathingAmplitudeYFlying = 0.06;
 breathingAmplitudeY = breathingAmplitudeYIdle;
 breathingSinAngle = 0;
