@@ -26,3 +26,44 @@ if (kNext) {
     else
         room_goto_next();
 }
+
+////////////////////////////////////////////////////////////////
+//Check level gen complete and spawn player/////////////////////
+////////////////////////////////////////////////////////////////
+if (levelGenerationComplete == false)
+{
+	i = 0;
+	success = true;
+	repeat(array_length_1d(minerInstances))
+	{
+		if (minerInstances[i++].numberOfMoves > 0)
+		{
+			success = false;
+			break;
+		}
+	}
+	levelGenerationComplete = success;
+	if (success)
+	{
+		//Level just finished, so spawn the player!
+		xPos = 0;
+		yPos = 0;
+		
+		//Find a start position for the player
+		numberOfSolidBlocks = instance_number(objSolid);
+		i = 0;
+		repeat (numberOfSolidBlocks)
+		{
+			block = instance_find(objSolid,i++);
+			if (!place_meeting(block.x,block.y-32,objSolid))
+			{
+				//this is a free space right above a solid block, place our player here!
+				xPos = block.x + 16;
+				yPos = block.y - 1;
+				break;
+			}
+		}
+		
+		global.playerInstance = instance_create_layer(xPos,yPos,"Instances",objPlayer);
+	}
+}
