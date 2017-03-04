@@ -8,7 +8,6 @@ energyBar = instance_create_layer(x+energyBarXOffset,y+energyBarYOffset,"Instanc
 // Inherit objEntity variables
 event_inherited();
 
-
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 //EVERYTHING IN HERE YOU CAN EDIT, MIKEY MAN
 //////////////////////////////////////////////////////////////////////////////////////
@@ -19,6 +18,7 @@ event_inherited();
 
 isWallJumpEnabled = false; //enable/disable wall jump functionality
 jumpCooldown = 0.1 * room_speed; //minimum time between jumps/air jumps
+jumpOverrunTime = 0.1 * room_speed; //time after leaving the ground that you can still jump
 flyingTime = 2 * room_speed;
 maxEnergy = 100;
 energy = maxEnergy;
@@ -33,7 +33,6 @@ onJumpXSquish = 0.25;
 onJumpYSquish = 3;
 onAirJumpXSquish = 0.5;
 onAirJumpYSquish = 2.0;
-
 
 //Movement stuff
 // Multiplier
@@ -84,6 +83,7 @@ spriteFallRight = sprPlayerFallRight;
 clingTimer = 0;
 jumpTimer = 1;
 flyingTimer = 2;
+jumpOverrunTimer = 3;
 
 // Misc ///////////////////////////////////////////////////////////////////////
 

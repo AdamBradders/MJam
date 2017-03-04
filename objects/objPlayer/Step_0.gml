@@ -25,6 +25,7 @@ cRight = place_meeting(x + 1, y, objSolid);
 // Apply the correct form of acceleration and friction
 if (onGround) 
 {
+	alarm[jumpOverrunTimer] = jumpOverrunTime;
     tempAccel = groundAccel;
     tempFric  = groundFric;
 } 
@@ -107,6 +108,8 @@ if (kRight && !kLeft && !sticking)
 	isRunning = true;
 }
 
+
+
 //Clamp the angle to 0->360 range
 if (angle < 0)
 {
@@ -159,8 +162,9 @@ if (isWallJumpEnabled)
 
 if (kJump) // Jump 
 { 
-    if (onGround)
+    if (onGround || alarm[jumpOverrunTimer] >= 0)
 	{
+		alarm[jumpTimer] = jumpCooldown;
 		isFlying = false;
         vy = -jumpHeight;
 		draw_yscale = onJumpYSquish;
@@ -168,6 +172,7 @@ if (kJump) // Jump
 	}
 	else if (!onGround && alarm[jumpTimer] < 0 && energy >= minAirJumpEnergy)
 	{
+		alarm[jumpTimer] = jumpCooldown;
 		//We can air jump, so do it!
 		vy = -jumpHeight;
 		draw_yscale = onAirJumpYSquish;
@@ -180,7 +185,6 @@ if (kJump) // Jump
 }
 else if (kJumpRelease && numberAirJumps == 0)  // Variable jumping
 { 
-	alarm[jumpTimer] = jumpCooldown;
     if (vy < 0)
 	{
         vy *= 0.25;
@@ -189,7 +193,6 @@ else if (kJumpRelease && numberAirJumps == 0)  // Variable jumping
 }
 else if (kJumpRelease)
 {
-	alarm[jumpTimer] = jumpCooldown;
 	//Stop rotating
 	isFlying = false;
 }

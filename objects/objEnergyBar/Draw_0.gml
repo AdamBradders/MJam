@@ -2,8 +2,6 @@ sub_image = 0;
 energy = global.playerInstance.energy;
 maxEnergy = global.playerInstance.maxEnergy;
 
-show_debug_message("EENRGY BAR AT " + string(energy));
-
 if (energy == maxEnergy)
 {
 	sub_image = 10;
