@@ -1,0 +1,1 @@
+drawScale = 0;
