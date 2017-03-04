@@ -163,25 +163,28 @@ if (isWallJumpEnabled)
 
 if (kJump) // Jump 
 { 
-    if (onGround || alarm[jumpOverrunTimer] >= 0)
+	if (!place_meeting(x,y-32,objSolid))
 	{
-		alarm[jumpTimer] = jumpCooldown;
-		isFlying = false;
-        vy = -jumpHeight;
-		draw_yscale = onJumpYSquish;
-		draw_xscale = onJumpXSquish;
-	}
-	else if (!onGround && alarm[jumpTimer] < 0 && energy >= minAirJumpEnergy)
-	{
-		alarm[jumpTimer] = jumpCooldown;
-		//We can air jump, so do it!
-		vy = -jumpHeight;
-		draw_yscale = onAirJumpYSquish;
-		draw_xscale = onAirJumpXSquish;
+	    if (onGround || alarm[jumpOverrunTimer] >= 0)
+		{
+			alarm[jumpTimer] = jumpCooldown;
+			isFlying = false;
+	        vy = -jumpHeight;
+			draw_yscale = onJumpYSquish;
+			draw_xscale = onJumpXSquish;
+		}
+		else if (!onGround && alarm[jumpTimer] < 0 && energy >= minAirJumpEnergy)
+		{
+			alarm[jumpTimer] = jumpCooldown;
+			//We can air jump, so do it!
+			vy = -jumpHeight;
+			draw_yscale = onAirJumpYSquish;
+			draw_xscale = onAirJumpXSquish;
 		
-		numberAirJumps++;
-		isFlying = true;
-		energy -= flapEnergyUse;
+			numberAirJumps++;
+			isFlying = true;
+			energy -= flapEnergyUse;
+		}
 	}
 }
 else if (kJumpRelease && numberAirJumps == 0)  // Variable jumping

@@ -55,7 +55,7 @@ if (levelGenerationComplete == false)
 		repeat (numberOfSolidBlocks)
 		{
 			block = instance_find(objSolid,i++);
-			if (!place_meeting(block.x,block.y-32,objSolid))
+			if (!place_meeting(block.x,block.y-1,objSolid))
 			{
 				//this is a free space right above a solid block, place our player here!
 				xPos = block.x + 16;
@@ -64,6 +64,22 @@ if (levelGenerationComplete == false)
 			}
 		}
 		
+		//Clear all blocks upwards from this point
+		xClear = block.x;
+		yClear = block.y-1;
+		while (yClear >= 0)
+		{
+			show_debug_message("Try block at x: " + string(xClear) + " y: " + string(yClear));
+			if (!place_meeting(xClear,yClear,objSolid))
+			{
+				blockToKill = instance_position(xClear,yClear,objSolid);
+				if (blockToKill != noone)
+				{
+					instance_destroy(blockToKill);
+				}
+			}
+			yClear-= 32;
+		}
 		global.playerInstance = instance_create_layer(xPos,yPos,"Instances",objPlayer);
 	}
 }
