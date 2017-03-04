@@ -26,6 +26,7 @@ kFire		 = keyboard_check_pressed(ord("X"));
 
 if (kFire)
 {
+	
 	bullet = instance_create_layer(x,y -16,"Instances",objPlayerBullet);
 	bulletSpeed = 10;
 	
