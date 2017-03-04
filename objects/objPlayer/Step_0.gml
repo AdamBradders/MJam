@@ -6,7 +6,7 @@ if (energyBar)
 	energyBar.y = y + energyBarYOffset;
 }
 
-var kLeft, kRight, kUp, kDown, kJump, kJumpRelease, tempAccel, tempFric;
+var kLeft, kRight, kUp, kDown, kJump, kJumpRelease, tempAccel, tempFric, kShoot;
 
 kLeft        = keyboard_check(vk_left);
 kRight       = keyboard_check(vk_right);
@@ -15,6 +15,7 @@ kDown        = keyboard_check(vk_down);
 
 kJump        = keyboard_check_pressed(ord("Z"));
 kJumpRelease = keyboard_check_released(ord("Z"));
+
 
 // Movement ///////////////////////////////////////////////////////////////////
 
@@ -257,6 +258,8 @@ if (energy <= 0)
 
 //image_xskew = lerp(image_xskew,0,0.1);
 //image_yskew = lerp(image_yskew,0,0.1);
+
+
 
 ///////////////////////////////////////////////////////////////
 //Animations///////////////////////////////////////////////////
