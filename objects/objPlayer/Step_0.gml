@@ -24,8 +24,9 @@ kFire		 = keyboard_check_pressed(ord("X"));
 // Bullet Shoot ///////////////////////////////////////////////////////////////////
 
 
-if (kFire)
+if (kFire && alarm[shootingCooldownTimer] < 0)
 {
+	alarm[shootingCooldownTimer] = shootingCooldown;
 	
 	bullet = instance_create_layer(x,y -16,"Instances",objPlayerBullet);
 	bulletSpeed = 18;
@@ -37,6 +38,11 @@ if (kFire)
 		{
 			bullet.angle = 0
 			bullet.vy = -bulletSpeed;
+		}
+		else if (kDown && !onGround)
+		{
+			bullet.angle = 0
+			bullet.vy = bulletSpeed;
 		}
 		else
 		{
@@ -428,14 +434,21 @@ if (onGround)
 	}
 	else
 	{
-		sprite_index = isFacingLeft ? spriteIdleLeft : spriteIdleRight;
+		if (kUp)
+		{
+			sprite_index = spriteLookingUp;
+		}
+		else
+		{
+			sprite_index = isFacingLeft ? spriteIdleLeft : spriteIdleRight;
+		}
 	}
 }
 else
 {
 	if (isFlying)
 	{
-		sprite_index = sprFlying;
+		sprite_index = spriteFlying;
 		
 		if (!wasFlying)
 		{

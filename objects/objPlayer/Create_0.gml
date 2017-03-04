@@ -27,7 +27,7 @@ flyingEnergyDrainRate = 0.8; //energy use per frame to sustain flying
 shootingRecoilGround = 5;
 shootingRecoilJump = 1;
 shootingRecoilFlying = 5;
-
+shootingCooldown = 0.02;
 
 //Squishes
 onLandingXSquish = 2;
@@ -80,6 +80,8 @@ spriteRunningRight = sprPlayerRunRight;
 spriteJump = sprPlayerJump;
 spriteFallLeft = sprPlayerFallLeft;
 spriteFallRight = sprPlayerFallRight;
+spriteLookingUp = sprLookingUp;
+spriteFlying = sprFlying;
 
 //Timer Assignments
 
@@ -87,6 +89,7 @@ clingTimer = 0;
 jumpTimer = 1;
 flyingTimer = 2;
 jumpOverrunTimer = 3;
+shootingCooldownTimer = 4;
 
 // Misc ///////////////////////////////////////////////////////////////////////
 
