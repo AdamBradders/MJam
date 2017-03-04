@@ -9,8 +9,8 @@ numberOfMiners = 10;
 i = numberOfMiners;
 repeat(numberOfMiners)
 {
-	randomX = floor(random(room_width));
-	randomY = floor(random(room_height));
+	randomX = 32 + floor(random(room_width-32));
+	randomY = 32 + floor(random(room_height-32));
 	minerInstances[--i] = instance_create_layer(randomX,randomY,"Instances",objWorldMiner);
 }
 
