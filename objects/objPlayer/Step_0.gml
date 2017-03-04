@@ -28,7 +28,7 @@ if (kFire)
 {
 	
 	bullet = instance_create_layer(x,y -16,"Instances",objPlayerBullet);
-	bulletSpeed = 10;
+	bulletSpeed = 18;
 	
 	if (!isFlying)
 	{

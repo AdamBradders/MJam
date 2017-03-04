@@ -2,10 +2,10 @@
 // Inherit objEntity variables
 event_inherited();
 
-initialXScale = 0.1;
-initialYScale = 0.1;
-scaleIncreaseRateX = 0.3;
-scaleIncreaseRateY = 0.3;
+initialXScale = 2;
+initialYScale = 2;
+scaleIncreaseRateX = 0.4;
+scaleIncreaseRateY = 0.4;
 
 currentXScale = initialXScale;
 currentYScale = initialYScale;
