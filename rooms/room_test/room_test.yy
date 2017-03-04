@@ -9,18 +9,19 @@
     "inheritCreationOrder": false,
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
-        "d2b89fd7-d50c-4e87-a85a-e7895b6e9ee2"
+        "d2b89fd7-d50c-4e87-a85a-e7895b6e9ee2",
+        "033c325f-fa5c-46ea-a5ef-8e9e86fb83bf"
     ],
     "layers": [
         {
-            "__type": "GMRAssetLayer_Model:#YoYoStudio.MVCFormat",
-            "id": "c29fdde1-692e-454b-be87-f656b7a3feb6",
-            "modelName": "GMRAssetLayer",
+            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+            "id": "47da7852-8ce3-4d79-9fed-2e26aff50c0a",
+            "modelName": "GMRInstanceLayer",
             "mvc": "1.0",
             "depth": 0,
             "grid_x": 32,
             "grid_y": 32,
-            "hierarchyFrozen": true,
+            "hierarchyFrozen": false,
             "hierarchyVisible": true,
             "inheritLayerDepth": false,
             "inheritLayerSettings": false,
@@ -30,34 +31,34 @@
                 
             ],
             "m_parentID": "00000000-0000-0000-0000-000000000000",
-            "m_serialiseFrozen": true,
-            "name": "Assets_1",
+            "m_serialiseFrozen": false,
+            "name": "instance_overlay",
             "userdefined_depth": false,
             "visible": true,
-            "assets": [
+            "instances": [
                 {
-                    "__type": "GMRSpriteGraphic_Model:#YoYoStudio.MVCFormat",
-                    "id": "78756567-e150-4538-953a-34248539d893",
-                    "modelName": "GMRSpriteGraphic",
+                    "id": "033c325f-fa5c-46ea-a5ef-8e9e86fb83bf",
+                    "modelName": "GMRInstance",
                     "mvc": "1.0",
                     "ignore": false,
                     "inheritItemSettings": false,
                     "m_originalParentID": "00000000-0000-0000-0000-000000000000",
                     "m_serialiseFrozen": false,
-                    "name": "graphic_1BB482E9",
+                    "name": "inst_2234E024",
                     "x": 0,
                     "y": 0,
-                    "animationFPS": 15,
-                    "animationSpeedType": 0,
+                    "IsDnD": false,
                     "colour": {
                         "Value": 4294967295
                     },
-                    "frameIndex": 0,
+                    "creationCodeFile": "",
+                    "creationCodeType": "",
+                    "inheritCode": false,
+                    "name_with_no_file_rename": "inst_2234E024",
+                    "objId": "b55d9fa1-4c34-490f-b015-c9e6b1a9cc40",
                     "rotation": 0,
-                    "scaleX": 63,
-                    "scaleY": 32,
-                    "spriteId": "548e44c6-e687-47a9-a92b-91dc095e7cd8",
-                    "userdefined_animFPS": false
+                    "scaleX": 1,
+                    "scaleY": 1
                 }
             ]
         },
