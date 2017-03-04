@@ -27,7 +27,12 @@ flyingEnergyDrainRate = 0.8; //energy use per frame to sustain flying
 shootingRecoilGround = 5;
 shootingRecoilJump = 1;
 shootingRecoilFlying = 5;
+
+//Shooting vars
 shootingCooldown = 0.02;
+shootingMaxChargeTime = 1 * room_speed;
+shootingChargedProjectileCount = 6;
+shootingChargedProjectileSpreadAngle = 40;
 
 //Squishes
 onLandingXSquish = 2;
@@ -71,6 +76,7 @@ isMoving = false;
 isFacingLeft = false;
 isFlying = false;
 wasFlying = false; //were we flying on the previous frame? by comparing with isFlying you can tell if we just started
+isChargingShoot = false;
 //Animations
 
 spriteIdleLeft = sprPlayerIdleLeft;
@@ -125,3 +131,7 @@ breathingRateIdle = 8;
 breathingRateRunning = 40;
 breathingRateFlying = 40;
 breathingRate = breathingRateIdle;
+
+//shooting the shit
+shootChargeHeldFrames = 0;
+bulletCharge = noone;
