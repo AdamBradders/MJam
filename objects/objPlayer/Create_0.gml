@@ -22,9 +22,9 @@ energy = maxEnergy;
 flapEnergyUse = 10; //amount of energy used to perform a flap
 minAirJumpEnergy = flapEnergyUse; //minimum energy required to perform a flap
 flyingEnergyDrainRate = 0.8; //energy use per frame to sustain flying
-shootingRecoilGround = 10;
+shootingRecoilGround = 5;
 shootingRecoilJump = 1;
-shootingRecoilFlying = 10;
+shootingRecoilFlying = 5;
 
 
 //Squishes
@@ -32,8 +32,8 @@ onLandingXSquish = 2;
 onLandingYSquish = 0.25;
 onJumpXSquish = 0.25;
 onJumpYSquish = 3;
-onAirJumpXSquish = 0.5;
-onAirJumpYSquish = 2.0;
+onAirJumpXSquish = 2;
+onAirJumpYSquish = 2;
 
 //Movement stuff
 // Multiplier
