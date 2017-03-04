@@ -287,7 +287,16 @@ else
 
 //breathing animation
 
-draw_xscale +=  breathingAmplitudeX * sin(degtorad(breathingSinAngle));
+if (isRunning)
+{
+	breathingRate = breathingRateRunning;
+	breathingAmplitudeY = breathingAmplitudeYRunning;
+}
+else
+{
+	breathingAmplitudeY = lerp(breathingAmplitudeY, breathingAmplitudeYIdle,0.05);
+	breathingRate = lerp(breathingRate, breathingRateIdle,0.03);
+}
 draw_yscale +=  breathingAmplitudeY * sin(degtorad(breathingSinAngle));
 breathingSinAngle += breathingRate;
 if (breathingSinAngle > 360)
