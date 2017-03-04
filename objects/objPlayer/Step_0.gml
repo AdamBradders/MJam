@@ -93,6 +93,7 @@ if (kFireReleased && isChargingShoot)
 			{
 				bullet.angle = 0
 				bullet.vy = bulletSpeed;
+				vy = shootingRecoilShootDown;
 			}
 			else
 			{

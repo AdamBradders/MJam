@@ -27,6 +27,7 @@ flyingEnergyDrainRate = 0.8; //energy use per frame to sustain flying
 shootingRecoilGround = 5;
 shootingRecoilJump = 1;
 shootingRecoilFlying = 5;
+shootingRecoilShootDown = -1.5;
 
 //Shooting vars
 shootingCooldown = 0.02;
