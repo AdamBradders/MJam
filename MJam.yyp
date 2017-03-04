@@ -471,6 +471,14 @@
             }
         },
         {
+            "Key": "dff7305b-0e6e-4d86-aa40-1395128f8218",
+            "Value": {
+                "id": "b213e335-dd94-4994-8ada-b4332a05bccc",
+                "resourcePath": "sprites\\sprCoin\\sprCoin.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e7cc5df1-f48b-4630-90b0-1ecb12c317d4",
             "Value": {
                 "id": "5d905b3c-aaa0-4ee8-8d16-ec0e7408b84f",
