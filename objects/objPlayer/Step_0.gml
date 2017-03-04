@@ -214,6 +214,47 @@ if (kJump) // Jump
 	{
 	    if (onGround || alarm[jumpOverrunTimer] >= 0)
 		{
+			//Do the ground squish
+			//center
+			if (place_meeting(x,y+1,objSolid))
+			{
+				blockInstance = instance_position(x,y+1,objSolid);
+				if (blockInstance != noone)
+				{
+					newSquish = blockInstance.squishOnJump;
+					if (newSquish < blockInstance.currentSquish)
+					{
+						blockInstance.currentSquish = newSquish;
+					}
+				}
+			}
+			//left
+			if (place_meeting(x-16,y+1,objSolid))
+			{
+				blockInstance = instance_position(x-16,y+1,objSolid);
+				if (blockInstance != noone)
+				{
+					newSquish = blockInstance.squishOnJump;
+					if (newSquish < blockInstance.currentSquish)
+					{
+						blockInstance.currentSquish = newSquish;
+					}
+				}
+			}
+			//right
+			if (place_meeting(x+16,y+1,objSolid))
+			{
+				blockInstance = instance_position(x+16,y+1,objSolid);
+				if (blockInstance != noone)
+				{
+					newSquish = blockInstance.squishOnJump;
+					if (newSquish < blockInstance.currentSquish)
+					{
+						blockInstance.currentSquish = newSquish;
+					}
+				}
+			}
+
 			alarm[jumpTimer] = jumpCooldown;
 			isFlying = false;
 	        vy = -jumpHeight;
@@ -315,12 +356,65 @@ if (energy <= 0)
 //Animations///////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////
 
+//Do the ground squish
+//center
+if (place_meeting(x,y+1,objSolid))
+{
+	blockInstance = instance_position(x,y+1,objSolid);
+	if (blockInstance != noone)
+	{
+		newSquish = 1;
+		if (onGround)
+		{
+			newSquish = wasOnGround ? blockInstance.squishyOnWalk : blockInstance.squishOnLand;
+		}
+		if (newSquish < blockInstance.currentSquish)
+		{
+			blockInstance.currentSquish = newSquish;
+		}
+	}
+}
+//left
+if (place_meeting(x-16,y+1,objSolid))
+{
+	blockInstance = instance_position(x-16,y+1,objSolid);
+	if (blockInstance != noone)
+	{
+		newSquish = 1;
+		if (onGround)
+		{
+			newSquish = wasOnGround ? blockInstance.squishyOnWalk : blockInstance.squishOnLand;
+		}
+		if (newSquish < blockInstance.currentSquish)
+		{
+			blockInstance.currentSquish = newSquish;
+		}
+	}
+}
+//right
+if (place_meeting(x+16,y+1,objSolid))
+{
+	blockInstance = instance_position(x+16,y+1,objSolid);
+	if (blockInstance != noone)
+	{
+		newSquish = 1;
+		if (onGround)
+		{
+			newSquish = wasOnGround ? blockInstance.squishyOnWalk : blockInstance.squishOnLand;
+		}
+		if (newSquish < blockInstance.currentSquish)
+		{
+			blockInstance.currentSquish = newSquish;
+		}
+	}
+}
+
 if (onGround)
 {
 	if (wasFlying)
 	{
 		//At this point we change our position to reflect that sprFlying has a different pivot
-		y += 15;
+		y += characterCollisionSize-1;
 	}	
 	energy = maxEnergy;
 	if (isRunning)
@@ -341,7 +435,7 @@ else
 		if (!wasFlying)
 		{
 			//At this point we change our position to reflect that sprFlying has a different pivot
-			y -= 16;
+			y -= characterCollisionSize;
 		}
 	}
 	else if (vy <= 0)
@@ -349,7 +443,7 @@ else
 		if (wasFlying)
 		{
 			//At this point we change our position to reflect that sprFlying has a different pivot
-			y += 16;
+			y += characterCollisionSize;
 		}	
 		sprite_index = spriteJump;
 	}
@@ -358,7 +452,7 @@ else
 		if (wasFlying)
 		{
 			//At this point we change our position to reflect that sprFlying has a different pivot
-			y += 16;
+			y += characterCollisionSize;
 		}	
 		sprite_index = isFacingLeft ? spriteFallLeft : spriteFallRight;
 		angle = 0

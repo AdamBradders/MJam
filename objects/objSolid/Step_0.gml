@@ -1,0 +1,1 @@
+currentSquish = lerp(currentSquish,1,squishRate);

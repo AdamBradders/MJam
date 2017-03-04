@@ -90,14 +90,14 @@
     "physicsShape": 0,
     "physicsShapePoints": [
         {
-            "id": "65dd31f7-f7f4-48a1-932a-9e7aef6321ce",
+            "id": "2fc1cdf1-33b8-485a-83db-51ab04a81955",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 16,
             "y": 16
         },
         {
-            "id": "4b79f53a-3263-45fc-8531-3e1b9cde3a0e",
+            "id": "b8018de3-2720-4afe-aa50-b94285c999d5",
             "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 16,

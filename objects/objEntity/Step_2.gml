@@ -13,6 +13,7 @@ repeat(abs(vx)) {
     if (!place_meeting(x + sign(vx), y, objSolid))
         x += sign(vx); 
     else {
+	
         vx = 0;
         break;
     }

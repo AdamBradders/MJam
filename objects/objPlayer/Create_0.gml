@@ -1,3 +1,5 @@
+characterCollisionSize = 16;
+
 energyBarXOffset = 0;
 energyBarYOffset = -40;
 
