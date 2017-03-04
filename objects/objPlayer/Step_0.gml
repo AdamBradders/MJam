@@ -32,12 +32,15 @@ if (kFire)
 	
 	if (!isFlying)
 	{
+		
 		if (kUp)
 		{
+			bullet.angle = 0
 			bullet.vy = -bulletSpeed;
 		}
 		else
 		{
+			bullet.angle = 90;
 			if (isFacingLeft)
 			{
 				bullet.vx = -bulletSpeed;
@@ -58,6 +61,8 @@ if (kFire)
 		bullet.vy = bulletSpeed * cos(degtorad(angle+180));
 		bullet.vx += vx;
 		bullet.vy += vy;
+		
+		bullet.angle = angle;
 		
 		vx += shootingRecoilFlying * sin(degtorad(angle));
 		vy += shootingRecoilFlying * cos(degtorad(angle));
