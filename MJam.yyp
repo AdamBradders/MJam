@@ -279,6 +279,14 @@
             }
         },
         {
+            "Key": "91302336-f414-428a-a678-db605fa13d98",
+            "Value": {
+                "id": "f4090ab5-6396-4b1d-be51-c5cb0a390d21",
+                "resourcePath": "sprites\\sprLookingUp\\sprLookingUp.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "9992a8e4-a4cd-4225-b5c2-099864c5689e",
             "Value": {
                 "id": "2b9999d4-3719-440b-ad0a-73a36973d0f1",
