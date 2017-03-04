@@ -12,7 +12,8 @@
         "c05523d4-2a6a-4d1a-90e6-74e689ea6233",
         "9992a8e4-a4cd-4225-b5c2-099864c5689e",
         "008d9d79-d1c9-4d3b-bad2-6278798f0da9",
-        "91302336-f414-428a-a678-db605fa13d98"
+        "91302336-f414-428a-a678-db605fa13d98",
+        "868e6eed-1b56-4490-9b23-dc0be91db570"
     ],
     "filterType": "GMSprite",
     "folderName": "Temp Animations",
