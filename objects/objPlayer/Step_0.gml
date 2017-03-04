@@ -11,7 +11,6 @@ if (energyBar)
 
 var kLeft, kRight, kUp, kDown, kJump, kJumpRelease, tempAccel, tempFric, kReset, kFire, kFireReleased;
 
-
 kLeft        = keyboard_check(vk_left);
 kRight       = keyboard_check(vk_right);
 kUp          = keyboard_check(vk_up);
