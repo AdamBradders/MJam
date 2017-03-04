@@ -28,26 +28,28 @@ if (kFire)
 {
 	bullet = instance_create_layer(x,y -16,"Instances",objPlayerBullet);
 	bulletSpeed = 10;
-
-	if (kUp)
+	
+	if (!isFlying)
 	{
-		bullet.vy = -bulletSpeed;
-	}
-	else
-	{
-		if (isFacingLeft)
+		if (kUp)
 		{
-			bullet.vx = -bulletSpeed;
-			vx += shootingRecoilGround;
+			bullet.vy = -bulletSpeed;
 		}
 		else
 		{
-			bullet.vx = bulletSpeed;
-			vx -= shootingRecoilGround;
+			if (isFacingLeft)
+			{
+				bullet.vx = -bulletSpeed;
+				vx += onGround ? shootingRecoilGround : shootingRecoilJump;
+			}
+			else
+			{
+				bullet.vx = bulletSpeed;
+				vx -= onGround ? shootingRecoilGround : shootingRecoilJump;
+			}
 		}
 	}
-		
-	if (!onGround && isFlying)
+	else if (isFlying)
 	{
 		bullet.x = x - (16*sin(degtorad(angle)));
 		bullet.y = y - (16*cos(degtorad(angle)));

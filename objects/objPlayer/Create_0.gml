@@ -17,14 +17,15 @@ event_inherited();
 isWallJumpEnabled = false; //enable/disable wall jump functionality
 jumpCooldown = 0.1 * room_speed; //minimum time between jumps/air jumps
 jumpOverrunTime = 0.1 * room_speed; //time after leaving the ground that you can still jump
-flyingTime = 2 * room_speed;
 maxEnergy = 100;
 energy = maxEnergy;
-flapEnergyUse = 45; //amount of energy used to perform a flap
+flapEnergyUse = 10; //amount of energy used to perform a flap
 minAirJumpEnergy = flapEnergyUse; //minimum energy required to perform a flap
-flyingEnergyDrainRate = 0.3; //energy use per frame to sustain flying
+flyingEnergyDrainRate = 0.8; //energy use per frame to sustain flying
 shootingRecoilGround = 10;
+shootingRecoilJump = 1;
 shootingRecoilFlying = 10;
+
 
 //Squishes
 onLandingXSquish = 2;
@@ -48,10 +49,10 @@ jumpHeight  = 12.0  * m;
 gravNorm    = 0.5  * m;
 gravSlide   = 0.25 * m; 
 rotationRate = 7 * m;
-flyingAccel = 0.8 * m;
+flyingAccel = 2.0 * m;
 flyingFric = 0.1 * m;
-vxFlyingMax = 8.0  * m;
-vyFlyingMax = 8.0 * m;
+vxFlyingMax = 9.0  * m;
+vyFlyingMax = 9.0 * m;
 clingTime   = 4.0 * room_speed * m;
 
 ////////////////////////////////////////////////////////////////////////////////////////
