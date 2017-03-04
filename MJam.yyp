@@ -463,14 +463,6 @@
             }
         },
         {
-            "Key": "bbffcff0-918b-4348-a812-6ca1dbdc7a71",
-            "Value": {
-                "id": "7bd76bac-f127-4156-86d3-67d33c9e3b46",
-                "resourcePath": "sprites\\sprBullet\\sprBullet.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "c05523d4-2a6a-4d1a-90e6-74e689ea6233",
             "Value": {
                 "id": "0714278d-1a69-4bac-b326-0bfeeeb528d2",
