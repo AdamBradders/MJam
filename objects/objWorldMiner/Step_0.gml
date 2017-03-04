@@ -26,7 +26,7 @@ if (numberOfMoves > 0)
 			
 			yPos = up ? y - 32 : y + 32;
 			if (place_meeting(x, yPos, objSolid) == false
-				&& (yPos >= 0 && yPos < room_height))
+				&& (yPos >= 32 && yPos < room_height))
 			{
 				success = true;
 				y = yPos;
@@ -49,7 +49,7 @@ if (numberOfMoves > 0)
 		{
 			xPos = left ? x - 32 : x + 32;
 			if (place_meeting(xPos, y, objSolid) == false
-				&& (xPos >= 0 && xPos < room_width))
+				&& (xPos >= 32 && xPos < room_width))
 			{
 				success = true;
 				x = xPos;
@@ -80,7 +80,7 @@ if (numberOfMoves > 0)
 			{
 				yPos = y + (random(1) > 0.5 ? 32 : -32);
 			}
-			if (xPos < 0 || xPos >= room_width || yPos < 0 || yPos >= room_height)
+			if (xPos < 32 || xPos >= room_width || yPos < 32 || yPos >= room_height)
 			{
 				//invalid!
 			}
@@ -92,4 +92,8 @@ if (numberOfMoves > 0)
 			}
 		}
 	}
+}
+else
+{
+	//instance_destroy(id);
 }

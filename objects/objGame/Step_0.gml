@@ -55,21 +55,20 @@ if (levelGenerationComplete == false)
 		repeat (numberOfSolidBlocks)
 		{
 			block = instance_find(objSolid,i++);
-			if (!place_meeting(block.x,block.y-1,objSolid))
+			if (!place_meeting(block.x,block.y-32,objSolid))
 			{
 				//this is a free space right above a solid block, place our player here!
 				xPos = block.x + 16;
-				yPos = block.y - 1;
+				yPos = block.y - 30;
 				break;
 			}
 		}
 		
 		//Clear all blocks upwards from this point
 		xClear = block.x;
-		yClear = block.y-1;
+		yClear = block.y-32;
 		while (yClear >= 0)
 		{
-			show_debug_message("Try block at x: " + string(xClear) + " y: " + string(yClear));
 			if (!place_meeting(xClear,yClear,objSolid))
 			{
 				blockToKill = instance_position(xClear,yClear,objSolid);
