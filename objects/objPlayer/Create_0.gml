@@ -68,7 +68,7 @@ isRunning = false;
 isMoving = false;
 isFacingLeft = false;
 isFlying = false;
-
+wasFlying = false; //were we flying on the previous frame? by comparing with isFlying you can tell if we just started
 //Animations
 
 spriteIdleLeft = sprPlayerIdleLeft;

@@ -317,6 +317,11 @@ if (energy <= 0)
 
 if (onGround)
 {
+	if (wasFlying)
+	{
+		//At this point we change our position to reflect that sprFlying has a different pivot
+		y -= 16;
+	}	
 	energy = maxEnergy;
 	if (isRunning)
 	{
@@ -332,13 +337,29 @@ else
 	if (isFlying)
 	{
 		sprite_index = sprFlying;
+		
+		if (!wasFlying)
+		{
+			//At this point we change our position to reflect that sprFlying has a different pivot
+			y -= 16;
+		}
 	}
 	else if (vy <= 0)
 	{
+		if (wasFlying)
+		{
+			//At this point we change our position to reflect that sprFlying has a different pivot
+			y += 16;
+		}	
 		sprite_index = spriteJump;
 	}
 	else
 	{
+		if (wasFlying)
+		{
+			//At this point we change our position to reflect that sprFlying has a different pivot
+			y += 16;
+		}	
 		sprite_index = isFacingLeft ? spriteFallLeft : spriteFallRight;
 		angle = 0
 	}
@@ -375,3 +396,5 @@ if (breathingSinAngle > 360)
 {
 	breathingSinAngle -= 360;
 }
+
+wasFlying = isFlying;
