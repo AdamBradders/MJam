@@ -9,8 +9,7 @@ if (energyBar)
 	energyBar.y = y + energyBarYOffset;
 }
 
-var kLeft, kRight, kUp, kDown, kJump, kJumpRelease, tempAccel, tempFric, kReset, kFire, kFireReleased;
-
+var kLeft, kRight, kUp, kDown, kJump, kJumpRelease, tempAccel, tempFric, kShoot, kReset;
 
 kLeft        = keyboard_check(vk_left);
 kRight       = keyboard_check(vk_right);
@@ -21,7 +20,6 @@ kJump        = keyboard_check_pressed(ord("Z"));
 kJumpRelease = keyboard_check_released(ord("Z"));
 
 kFire		 = keyboard_check_pressed(ord("X"));
-kFireReleased =  keyboard_check_released(ord("X"));
 
 kReset		 = keyboard_check_pressed(ord("R"));
 
@@ -34,130 +32,55 @@ if (kReset)
 
 // Bullet Shoot ///////////////////////////////////////////////////////////////////
 
-if (isChargingShoot)
-{
-	++shootChargeHeldFrames;
-	if (bulletCharge != noone)
-	{
-		bulletCharge.drawScale = clamp((1.0 /shootingMaxChargeTime)*shootChargeHeldFrames,0,1);
-		if (isFlying == false)
-		{
-			bulletCharge.x = x + (isFacingLeft ? -10 : 10) + vx;
-			bulletCharge.y = y - 16;
-		}
-		else
-		{
-			bulletCharge.x = vx + x - sin(degtorad(angle)) * 16;
-			bulletCharge.y = vy + y - cos(degtorad(angle)) * 16;
-		}
-	}
-}
 
 if (kFire && alarm[shootingCooldownTimer] < 0)
 {
-	isChargingShoot = true;
-	shootChargeHeldFrames = 0;
-	bulletCharge = instance_create_layer(x + (isFacingLeft ? -10 : 10),y-16,"Instances",objShootCharge);
-}
-if (kFireReleased && isChargingShoot)
-{
-	repeatCount = 1;
-	if (shootChargeHeldFrames >= shootingMaxChargeTime)
-	{
-		//Multi shoot!
-		repeatCount = shootingChargedProjectileCount;
-	}
-	shootChargeHeldFrames = 0;
-	if (bulletCharge != noone)
-	{
-		instance_destroy(bulletCharge);
-		bulletCharge = noone;
-	}
-	
 	alarm[shootingCooldownTimer] = shootingCooldown;
 	
-	i = 0;
-	repeat (repeatCount)
-	{
-		bullet = instance_create_layer(x,y -16,"Instances",objPlayerBullet);
-		bulletSpeed = 18;
+	bullet = instance_create_layer(x,y -16,"Instances",objPlayerBullet);
+	bulletSpeed = 18;
 	
-		if (!isFlying)
-		{
+	if (!isFlying)
+	{
 		
-			if (kUp)
+		if (kUp)
+		{
+			bullet.angle = 0
+			bullet.vy = -bulletSpeed;
+		}
+		else if (kDown && !onGround)
+		{
+			bullet.angle = 0
+			bullet.vy = bulletSpeed;
+		}
+		else
+		{
+			bullet.angle = 90;
+			if (isFacingLeft)
 			{
-				bullet.angle = 0
-				bullet.vy = -bulletSpeed;
-			}
-			else if (kDown && !onGround)
-			{
-				bullet.angle = 0
-				bullet.vy = bulletSpeed;
+				bullet.vx = -bulletSpeed;
+				vx += onGround ? shootingRecoilGround : shootingRecoilJump;
 			}
 			else
 			{
-				bullet.angle = 90;
-				if (isFacingLeft)
-				{
-					bullet.vx = -bulletSpeed;
-					if (i==0)
-					{
-						vx += onGround ? shootingRecoilGround : shootingRecoilJump;
-					}
-				}
-				else
-				{
-					bullet.vx = bulletSpeed;
-					if (i==0)
-					{
-						vx -= onGround ? shootingRecoilGround : shootingRecoilJump;	
-					}
-				}
+				bullet.vx = bulletSpeed;
+				vx -= onGround ? shootingRecoilGround : shootingRecoilJump;
 			}
 		}
-		else if (isFlying)
-		{
-			bullet.x = x - (16*sin(degtorad(angle)));
-			bullet.y = y - (16*cos(degtorad(angle)));
-			bullet.vx = bulletSpeed * sin(degtorad(angle+180));
-			bullet.vy = bulletSpeed * cos(degtorad(angle+180));
-			bullet.vx += vx;
-			bullet.vy += vy;
+	}
+	else if (isFlying)
+	{
+		bullet.x = x - (16*sin(degtorad(angle)));
+		bullet.y = y - (16*cos(degtorad(angle)));
+		bullet.vx = bulletSpeed * sin(degtorad(angle+180));
+		bullet.vy = bulletSpeed * cos(degtorad(angle+180));
+		bullet.vx += vx;
+		bullet.vy += vy;
 		
-			bullet.angle = angle;
+		bullet.angle = angle;
 		
-			if (i==0)
-			{
-				vx += shootingRecoilFlying * sin(degtorad(angle));
-				vy += shootingRecoilFlying * cos(degtorad(angle));
-			}
-		}
-		
-		if (repeatCount > 1)
-		{
-			//Work out magnitude of bullet velocity
-			velocityMagnitude = sqrt(bullet.vx*bullet.vx + bullet.vy*bullet.vy);
-			
-			//Use it to normalise
-			bulletVX = bullet.vx/velocityMagnitude;
-			bulletVY = bullet.vy/velocityMagnitude;
-			
-			dp = dot_product(0,1,bulletVX,bulletVY);
-			cross_product = dot_product(0,1, -bulletVY,bulletVX);
-			currentBulletAngle = cross_product > 0 ? radtodeg(arccos(dp)) : 360- radtodeg(arccos(dp));
-			show_debug_message("ANGLE OF BULLET IS " + string(currentBulletAngle));
-			
-			randomAngle = currentBulletAngle + random(shootingChargedProjectileSpreadAngle*0.5) * (random(1) < 0.5 ? -1 : 1);
-			
-			bulletVX = velocityMagnitude * sin(degtorad(randomAngle));
-			bulletVY = velocityMagnitude * cos(degtorad(randomAngle));
-			
-			bullet.vx = bulletVX;
-			bullet.vy = bulletVY;
-		}
-		
-		++i;
+		vx += shootingRecoilFlying * sin(degtorad(angle));
+		vy += shootingRecoilFlying * cos(degtorad(angle));
 	}
 }
 

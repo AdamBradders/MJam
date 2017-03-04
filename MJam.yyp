@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "0e07efcd-20c6-445f-9a62-9b0ecc8398b9",
+            "Value": {
+                "id": "614524e3-93ef-465e-a76d-04131b7798cb",
+                "resourcePath": "sprites\\sprPortalPolice\\sprPortalPolice.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "0eba1656-830f-4397-84b2-e1ab8b59a47a",
             "Value": {
                 "id": "25a893f2-1894-4783-b295-e1b87f26fc62",
@@ -115,6 +123,14 @@
             "Value": {
                 "id": "ee138821-e17f-4257-8556-1851803f5c7b",
                 "resourcePath": "objects\\objPlayerBullet\\objPlayerBullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3142fdd0-fe67-4426-b3db-3da0164821ee",
+            "Value": {
+                "id": "529b90bf-4ae3-4fcf-bd8b-a336a420641e",
+                "resourcePath": "objects\\objCoin\\objCoin.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -180,6 +196,14 @@
                 "id": "5d34a092-3557-437f-92fd-fbde60cdbcc7",
                 "resourcePath": "views\\43fcb97b-48be-41c1-8a42-20c69d2087ee.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "461373ab-724e-4706-b55a-f2592ef4005b",
+            "Value": {
+                "id": "8688f0c6-5b82-46e0-98b0-fd2163fef6ef",
+                "resourcePath": "objects\\objSpitter\\objSpitter.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -407,6 +431,14 @@
             }
         },
         {
+            "Key": "b55d9fa1-4c34-490f-b015-c9e6b1a9cc40",
+            "Value": {
+                "id": "0fd43bfb-6f7e-4945-b0ce-cfc2eb7bab6a",
+                "resourcePath": "objects\\objOverlayColour\\objOverlayColour.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b710aa37-b461-4875-b58b-ac147c06b5d1",
             "Value": {
                 "id": "3af4d69c-028e-4426-8ff0-7d16db48b76a",
@@ -508,6 +540,14 @@
                 "id": "b213e335-dd94-4994-8ada-b4332a05bccc",
                 "resourcePath": "sprites\\sprCoin\\sprCoin.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "e6070233-fe16-45a6-a2ce-5407fa2dc45d",
+            "Value": {
+                "id": "a28523e8-97b7-45a3-8e13-918f0b3f98bc",
+                "resourcePath": "objects\\objPortalPolice\\objPortalPolice.yy",
+                "resourceType": "GMObject"
             }
         },
         {
