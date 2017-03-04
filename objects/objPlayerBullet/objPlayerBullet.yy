@@ -1,5 +1,5 @@
 {
-    "id": "d862d060-fc20-415f-8d79-92b70734ebc8",
+    "id": "2ec91740-9a03-42a9-aa45-685768e419fc",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "objPlayerBullet",
@@ -22,6 +22,6 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "solid": false,
-    "spriteId": "244fa575-1264-4833-8ae3-5de363266722",
+    "spriteId": "bbffcff0-918b-4348-a812-6ca1dbdc7a71",
     "visible": true
 }
