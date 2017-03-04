@@ -9,7 +9,7 @@ if (energyBar)
 	energyBar.y = y + energyBarYOffset;
 }
 
-var kLeft, kRight, kUp, kDown, kJump, kJumpRelease, tempAccel, tempFric, kShoot;
+var kLeft, kRight, kUp, kDown, kJump, kJumpRelease, tempAccel, tempFric, kShoot, kReset;
 
 kLeft        = keyboard_check(vk_left);
 kRight       = keyboard_check(vk_right);
@@ -20,6 +20,15 @@ kJump        = keyboard_check_pressed(ord("Z"));
 kJumpRelease = keyboard_check_released(ord("Z"));
 
 kFire		 = keyboard_check_pressed(ord("X"));
+
+kReset		 = keyboard_check_pressed(ord("R"));
+
+// Reset Room /////////////////////////////////////////////////////////////////////
+
+if (kReset)
+{
+	room_restart()
+}
 
 // Bullet Shoot ///////////////////////////////////////////////////////////////////
 
