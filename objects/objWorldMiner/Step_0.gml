@@ -26,7 +26,7 @@ if (numberOfMoves > 0)
 			
 			yPos = up ? y - 32 : y + 32;
 			if (place_meeting(x, yPos, objSolid) == false
-				&& (yPos >= (32*global.worldMarginSizeInTiles) && yPos < room_height-(32*global.worldMarginSizeInTiles)))
+				&& (yPos >= (32*global.worldMarginSizeInTiles) && yPos <= room_height-(32*global.worldMarginSizeInTiles)))
 			{
 				success = true;
 				y = yPos;
@@ -49,7 +49,7 @@ if (numberOfMoves > 0)
 		{
 			xPos = left ? x - 32 : x + 32;
 			if (place_meeting(xPos, y, objSolid) == false
-				&& (xPos >= (32*global.worldMarginSizeInTiles) && xPos < (room_width-(32*global.worldMarginSizeInTiles))))
+				&& (xPos >= (32*global.worldMarginSizeInTiles) && xPos <= (room_width-(32*global.worldMarginSizeInTiles))))
 			{
 				success = true;
 				x = xPos;
