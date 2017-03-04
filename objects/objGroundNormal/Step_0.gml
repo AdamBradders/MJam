@@ -6,10 +6,10 @@ switch (hp)
 		sprite_index = sprTestTile;
 		break;
 	case 2:
-		sprite_index = sprTestTileDmg_01;
+		sprite_index = sprTestTileDMG_01;
 		break;
 	case 1:
-		sprite_index = sprTestTileDmg_02;
+		sprite_index = sprTestTileDMG_02;
 		break;
 	case 0:
 		instance_destroy(id);
