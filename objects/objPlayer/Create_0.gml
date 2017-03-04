@@ -23,6 +23,8 @@ energy = maxEnergy;
 flapEnergyUse = 45; //amount of energy used to perform a flap
 minAirJumpEnergy = flapEnergyUse; //minimum energy required to perform a flap
 flyingEnergyDrainRate = 0.3; //energy use per frame to sustain flying
+shootingRecoilGround = 10;
+shootingRecoilFlying = 10;
 
 //Squishes
 onLandingXSquish = 2;
@@ -108,10 +110,12 @@ image_xskew = 0;
 image_yskew = 0;
 
 //Breathing animation
-breathingAmplitudeYRunning = 0.03;
 breathingAmplitudeYIdle = 0.01;
+breathingAmplitudeYRunning = 0.03;
+breathingAmplitudeYFlying = 0.06;
 breathingAmplitudeY = breathingAmplitudeYIdle;
 breathingSinAngle = 0;
 breathingRateIdle = 8;
 breathingRateRunning = 40;
+breathingRateFlying = 40;
 breathingRate = breathingRateIdle;

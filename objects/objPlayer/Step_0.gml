@@ -1,3 +1,6 @@
+/// Character update everything yea
+
+
 // Input //////////////////////////////////////////////////////////////////////
 
 if (energyBar)
@@ -16,6 +19,47 @@ kDown        = keyboard_check(vk_down);
 kJump        = keyboard_check_pressed(ord("Z"));
 kJumpRelease = keyboard_check_released(ord("Z"));
 
+kFire		 = keyboard_check_pressed(ord("X"));
+
+// Bullet Shoot ///////////////////////////////////////////////////////////////////
+
+
+if (kFire)
+{
+	bullet = instance_create_layer(x,y -16,"Instances",objPlayerBullet);
+	bulletSpeed = 10;
+
+	if (kUp)
+	{
+		bullet.vy = -bulletSpeed;
+	}
+	else
+	{
+		if (isFacingLeft)
+		{
+			bullet.vx = -bulletSpeed;
+			vx += shootingRecoilGround;
+		}
+		else
+		{
+			bullet.vx = bulletSpeed;
+			vx -= shootingRecoilGround;
+		}
+	}
+		
+	if (!onGround && isFlying)
+	{
+		bullet.x = x - (16*sin(degtorad(angle)));
+		bullet.y = y - (16*cos(degtorad(angle)));
+		bullet.vx = bulletSpeed * sin(degtorad(angle+180));
+		bullet.vy = bulletSpeed * cos(degtorad(angle+180));
+		bullet.vx += vx;
+		bullet.vy += vy;
+		
+		vx += shootingRecoilFlying * sin(degtorad(angle));
+		vy += shootingRecoilFlying * cos(degtorad(angle));
+	}
+}
 
 // Movement ///////////////////////////////////////////////////////////////////
 
@@ -282,7 +326,11 @@ if (onGround)
 }
 else
 {
-	if (vy <= 0 || isFlying)
+	if (isFlying)
+	{
+		sprite_index = sprFlying;
+	}
+	else if (vy <= 0)
 	{
 		sprite_index = spriteJump;
 	}
@@ -296,7 +344,12 @@ else
 
 //breathing animation
 
-if (isRunning)
+if (isFlying)
+{
+	breathingRate = breathingRateFlying;
+	breathingAmplitudeY = breathingAmplitudeYFlying;
+}
+else if (isRunning)
 {
 	breathingRate = breathingRateRunning;
 	breathingAmplitudeY = breathingAmplitudeYRunning;
@@ -306,7 +359,14 @@ else
 	breathingAmplitudeY = lerp(breathingAmplitudeY, breathingAmplitudeYIdle,0.05);
 	breathingRate = lerp(breathingRate, breathingRateIdle,0.03);
 }
-draw_yscale +=  breathingAmplitudeY * sin(degtorad(breathingSinAngle));
+if (isFlying)
+{
+	draw_xscale += breathingAmplitudeY * sin(degtorad(breathingSinAngle));
+}
+else
+{
+	draw_yscale +=  breathingAmplitudeY * sin(degtorad(breathingSinAngle));
+}
 breathingSinAngle += breathingRate;
 if (breathingSinAngle > 360)
 {
