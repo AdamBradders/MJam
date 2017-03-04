@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "objGroundNormal",
     "eventList": [
-        
+        {
+            "id": "7616cc22-8bb5-466e-b36b-2cad0d78253e",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "4e70997b-0806-46f8-9249-d2e5b7e26b99"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "parentObjectId": "0f96cdd3-0891-487a-83d4-c32d63b923a9",
