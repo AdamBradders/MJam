@@ -41,7 +41,7 @@ shootingRapidFireSpreadAngle = 10;
 onLandingXSquish = 2;
 onLandingYSquish = 0.25;
 onJumpXSquish = 0.25;
-onJumpYSquish = 3;
+onJumpYSquish = 2;
 onAirJumpXSquish = 2;
 onAirJumpYSquish = 2;
 
