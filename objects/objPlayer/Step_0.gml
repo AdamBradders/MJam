@@ -13,8 +13,8 @@ kRight       = keyboard_check(vk_right);
 kUp          = keyboard_check(vk_up);
 kDown        = keyboard_check(vk_down);
 
-kJump        = keyboard_check_pressed(vk_space);
-kJumpRelease = keyboard_check_released(vk_space);
+kJump        = keyboard_check_pressed(ord("Z"));
+kJumpRelease = keyboard_check_released(ord("Z"));
 
 // Movement ///////////////////////////////////////////////////////////////////
 
