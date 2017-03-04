@@ -3,7 +3,15 @@ repeat(abs(vy)) {
     if (!place_meeting(x, y + sign(vy), objSolid))
         y += sign(vy); 
     else {
-        instance_destroy(id);
+      	
+		instance = instance_place(x,y+sign(vy),objSolid);
+		if (instance != noone)
+		{
+			instance.hp--;
+		}
+		 
+		instance_destroy(id);
+	
         break;
     }
 }
@@ -13,7 +21,15 @@ repeat(abs(vx)) {
     if (!place_meeting(x + sign(vx), y, objSolid))
         x += sign(vx); 
     else {
-        instance_destroy(id);
+		
+		instance = instance_place(x+sign(vx),y,objSolid);
+		if (instance != noone)
+		{
+			instance.hp--;
+		}
+		
+		instance_destroy(id);
+		 
         break;
     }
 }
