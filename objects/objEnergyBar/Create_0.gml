@@ -1,0 +1,1 @@
+global.energyBarUIObject = id;
