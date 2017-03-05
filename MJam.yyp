@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "053a7a99-bb43-4845-913f-3880c64c2c0a",
+            "Value": {
+                "id": "252c8043-859b-40b7-8f09-9764288c80cb",
+                "resourcePath": "sounds\\sfx_step_03\\sfx_step_03.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "0e07efcd-20c6-445f-9a62-9b0ecc8398b9",
             "Value": {
                 "id": "614524e3-93ef-465e-a76d-04131b7798cb",
@@ -124,6 +132,14 @@
                 "id": "3ec64a0b-fb0d-446f-b675-066a6e34636c",
                 "resourcePath": "sprites\\sprTestTileBigRare\\sprTestTileBigRare.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "1a93d983-986b-49d8-b971-5c50188f64f5",
+            "Value": {
+                "id": "64a0dc10-39bf-4c4c-b425-7c7039b01525",
+                "resourcePath": "sounds\\sfx_step_02\\sfx_step_02.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -415,6 +431,14 @@
             }
         },
         {
+            "Key": "6e410aa4-2536-47a5-a10f-8a07d13506cf",
+            "Value": {
+                "id": "170d9b02-1e21-4977-b6ec-088deca1156d",
+                "resourcePath": "sounds\\sfx_step_04\\sfx_step_04.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "6f51b07e-91e3-4ae3-84ef-e6ee5f1de16f",
             "Value": {
                 "id": "41315f59-1fe2-4ed4-a316-a49455637ead",
@@ -444,6 +468,14 @@
                 "id": "4e7c68b8-3e77-4db5-987f-61740c469ed0",
                 "resourcePath": "objects\\objShootCharge\\objShootCharge.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "771c91be-33a1-472d-bc8d-397a00a4f9d0",
+            "Value": {
+                "id": "d211e167-bd7c-41ed-91cb-2743a6f5dfe8",
+                "resourcePath": "sounds\\sfx_step_01\\sfx_step_01.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -756,6 +788,14 @@
                 "id": "2b1abb02-907a-464e-ac0b-cf7c58362d16",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "ced8fed4-e364-42b8-bc8a-1b9626551a3e",
+            "Value": {
+                "id": "42bfd58d-7d7c-4599-8a57-8c880cab86a3",
+                "resourcePath": "sounds\\sfx_step_05\\sfx_step_05.yy",
+                "resourceType": "GMSound"
             }
         },
         {
