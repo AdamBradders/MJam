@@ -2,13 +2,18 @@ event_inherited();
 
 onHitRecoil = 10;
 
+
+bounceOnContact = true;
+bounceCoeff = 0.8;
+
 hp = 3;
 
 moveSquish = 0.5;
+bulletHitSquish = 0.1;
 squishRate = 0.1;
 
 moveThrust = 10;
-moveFric = 0.3;
+moveFric = 0.4;
 
 moveTriggerDistance = 10 * 32; //10 tiles
 
