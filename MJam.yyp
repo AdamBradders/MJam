@@ -487,6 +487,14 @@
             }
         },
         {
+            "Key": "881f8e71-6a01-42e5-87f3-3391bfef34c7",
+            "Value": {
+                "id": "78603f70-1d45-4f9c-b2e2-87175e5f77a4",
+                "resourcePath": "sprites\\sprSpitterHitFrame\\sprSpitterHitFrame.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8f617633-1763-42d3-9220-4e0607ac91c0",
             "Value": {
                 "id": "21247477-12a2-43a7-85dd-2c6ca2eff223",
@@ -567,6 +575,14 @@
             }
         },
         {
+            "Key": "a8a2ae6f-681a-4b58-8bd5-003f57160e9e",
+            "Value": {
+                "id": "2bd9c5a5-7fa1-416c-b631-fbcb4c77e61f",
+                "resourcePath": "sprites\\sprFloaterHitFrame\\sprFloaterHitFrame.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "7c6d4ba3-893e-4282-aac4-6f409e2754d9",
@@ -639,6 +655,14 @@
             }
         },
         {
+            "Key": "ba16feb7-2f95-4e4a-a140-28b758b4fed6",
+            "Value": {
+                "id": "5c2b69c3-0f8b-4e77-a9e1-784c0c302e82",
+                "resourcePath": "objects\\objFloater\\objFloater.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ba542759-bebb-4ee9-8eb8-d2829f34118c",
             "Value": {
                 "id": "2e2f1de9-b247-4f88-b03e-0b4388350b16",
@@ -674,7 +698,7 @@
             "Key": "c1d643c3-b14e-4473-a789-04d9c2260003",
             "Value": {
                 "id": "11e5e5a5-63b1-46db-9b26-9ff08d18bf05",
-                "resourcePath": "sprites\\sprBombNormalArmed\\sprBombNormalArmed.yy",
+                "resourcePath": "sprites\\sprBombNormalHitFrame\\sprBombNormalHitFrame.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -700,6 +724,14 @@
                 "id": "2b1abb02-907a-464e-ac0b-cf7c58362d16",
                 "resourcePath": "options\\windows\\options_windows.yy",
                 "resourceType": "GMWindowsOptions"
+            }
+        },
+        {
+            "Key": "d256f90e-de33-4fc3-912a-045a3419b81b",
+            "Value": {
+                "id": "49d24c19-35b5-4924-855c-1c9380244ea1",
+                "resourcePath": "sprites\\sprPortalPoliceHitFrame\\sprPortalPoliceHitFrame.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
