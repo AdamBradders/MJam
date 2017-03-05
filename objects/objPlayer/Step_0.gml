@@ -41,8 +41,16 @@ if (isChargingShoot)
 		bulletCharge.drawScale = clamp((1.0 /shootingMaxChargeTime)*shootChargeHeldFrames,0,1);
 		if (isFlying == false)
 		{
-			bulletCharge.x = x + (isFacingLeft ? -10 : 10) + vx;
-			bulletCharge.y = y - 16;
+			if (kUp)
+			{
+				bulletCharge.x = x;
+				bulletCharge.y = y - 26;
+			}
+			else
+			{
+				bulletCharge.x = x + (isFacingLeft ? -10 : 10) + vx;
+				bulletCharge.y = y - 16;
+			}
 		}
 		else
 		{
