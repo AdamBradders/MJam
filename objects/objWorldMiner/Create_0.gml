@@ -8,7 +8,7 @@ minimumNumberOfMoves = 20;
 likelyhoodHorizontal = 1.4;
 likelyhoodVertical = 1;
 likelyhoodBigTile = 0.1; //1 in 10
-likelyhoodIsGold = 0.3;
+likelyhoodIsGold = 0.1;
 
 
 //DON'T FUCK WITH THIS SHIZ UNLESS YOU REALLY REALLY WANNA

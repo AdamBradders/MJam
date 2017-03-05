@@ -4,7 +4,7 @@ randomize();
 //Alternativly use the line below to force the same level generation every time
 //random_set_seed(10);
 
-numberOfMiners = 15;
+numberOfMiners = 20;
 
 global.worldMarginSizeInTiles = 5;
 portalPreSpawnTime = 3 * room_speed;
