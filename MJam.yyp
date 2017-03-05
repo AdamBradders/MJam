@@ -295,6 +295,14 @@
             }
         },
         {
+            "Key": "5553430b-56ab-448a-9dbe-8905e9c3e328",
+            "Value": {
+                "id": "7897a020-a3c7-4d3d-bcfd-0a43f8c56577",
+                "resourcePath": "sprites\\sprTestTileBigGoldDMG_03\\sprTestTileBigGoldDMG_03.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "58f849d9-ea7b-47fc-869e-27be6e582f00",
             "Value": {
                 "id": "01df5409-25bd-40f1-b336-02fb9b088315",
@@ -343,6 +351,14 @@
             }
         },
         {
+            "Key": "6f51b07e-91e3-4ae3-84ef-e6ee5f1de16f",
+            "Value": {
+                "id": "41315f59-1fe2-4ed4-a316-a49455637ead",
+                "resourcePath": "sprites\\sprTestTileBigGold\\sprTestTileBigGold.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "704a8ad3-66e7-46ca-9fae-98ce107d1012",
             "Value": {
                 "id": "6d3b0677-1951-4cd8-aa8b-100931f1f4c7",
@@ -379,6 +395,14 @@
             "Value": {
                 "id": "d06a9709-ce90-40fc-b61a-93b51449c1a6",
                 "resourcePath": "sprites\\sprFlightEnergyBar\\sprFlightEnergyBar.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "7f117499-aaca-4d33-91e7-0346d238d8fd",
+            "Value": {
+                "id": "efb2fdd6-deca-4fb8-8e23-4bfd1a3de8a9",
+                "resourcePath": "sprites\\sprTestTileBigGoldDMG_01\\sprTestTileBigGoldDMG_01.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -427,6 +451,14 @@
             "Value": {
                 "id": "be167693-1a63-439d-be21-9415d3b753ee",
                 "resourcePath": "sprites\\sprTestTileBigDMG_02\\sprTestTileBigDMG_02.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "969f6443-c3e7-4d72-beaa-9cf8fcd13ed5",
+            "Value": {
+                "id": "f1e72bea-aea9-4b6a-90e9-2b880122b20f",
+                "resourcePath": "sprites\\sprTestTileBigGoldDMG_02\\sprTestTileBigGoldDMG_02.yy",
                 "resourceType": "GMSprite"
             }
         },

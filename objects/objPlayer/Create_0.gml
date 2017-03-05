@@ -30,11 +30,11 @@ shootingRecoilShootDown = -1.5;
 
 //Shooting vars
 shootingCooldown = 0.02;
-shootingRapidFireCooldown = 3;
+shootingRapidFireCooldown = 5;
 shootingMaxChargeTime = 1 * room_speed;
 shootingChargedProjectileCount = 6;
 shootingChargedProjectileSpreadAngle = 40;
-shootingRapidFireSpreadAngle = 10;
+shootingRapidFireSpreadAngle = 20;
 
 //Squishes
 onLandingXSquish = 2;
