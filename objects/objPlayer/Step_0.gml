@@ -308,7 +308,16 @@ if (kRight && !kLeft && !sticking)
 	isRunning = true;
 }
 
-
+if (isRunning)
+{
+	if (alarm[footstepSoundTimer] < 0)
+	{
+		alarm[footstepSoundTimer] = footstepSoundDelay;
+		//TRIGGER SOUND HERE DOOOOG
+		
+		
+	}
+}
 
 //Clamp the angle to 0->360 range
 if (angle < 0)

@@ -71,6 +71,9 @@ clingTime   = 4.0 * room_speed * m;
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 //EVERYTHING BELOW HERE YOU CAN'T EDIT. WELL YOU CAN, BUT AT YOUR OWN RISK, YO.
 
+//AUDIO FOR THE SHIZZLES
+footstepSoundDelay = 0.1 * room_speed; //this is in seconds, or remove room_speed to get frames
+
 //These are 'getable' - don't change them here!
 //YOU HEAR ME, CUNT? DON'T FUCKING CHANGE THESE.
 isRunning = false;
@@ -100,6 +103,7 @@ jumpTimer = 1;
 flyingTimer = 2;
 jumpOverrunTimer = 3;
 shootingCooldownTimer = 4;
+footstepSoundTimer = 5;
 
 // Misc ///////////////////////////////////////////////////////////////////////
 

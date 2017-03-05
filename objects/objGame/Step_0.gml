@@ -105,6 +105,27 @@ if (levelGenerationComplete == false)
 			}
 		}
 		
+		//Create all the bad dudes
+		numFloaters = 50;
+		
+		repeat (numFloaters)
+		{
+			floaterX = 0;
+			floaterY = 0;
+			while (true)
+			{
+				floaterX = random_range(64,room_width-64);
+				floaterY = random_range(64,room_height-64);
+				
+				if (!collision_rectangle( floaterX - 32, floaterY - 32, floaterX + 32, floaterY + 32, objSolid, false, true )&&
+					!collision_rectangle( floaterX - 32, floaterY - 32, floaterX + 32, floaterY + 32, objEntity, false, true ))
+					{
+						break;
+					}
+			}
+			instance_create_layer(floaterX,floaterY,"Instances",objFloater);
+		}
+		
 		camera_set_view_target(view_camera[0],global.portals[0]);
 		alarm[0] = portalPreSpawnTime;
 	}

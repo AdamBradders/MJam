@@ -1,5 +1,7 @@
 /// Create miners
 
+global.playerInstance = noone;
+
 randomize();
 //Alternativly use the line below to force the same level generation every time
 //random_set_seed(10);
