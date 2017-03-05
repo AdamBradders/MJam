@@ -1,6 +1,6 @@
 event_inherited();
 
-onHitRecoil = 10;
+onHitRecoil = 2;
 
 
 bounceOnContact = true;
@@ -12,13 +12,13 @@ moveSquish = 0.5;
 bulletHitSquish = 0.1;
 squishRate = 0.1;
 
-moveThrust = 10;
-moveFric = 0.4;
+moveThrust = 4;
+moveFric = 0.1;
 
 moveTriggerDistance = 10 * 32; //10 tiles
 
 canMove = true;
-moveCooldown = 0.4 * room_speed;
+moveCooldown = 0.9 * room_speed;
 
 drawing_scale = 1;
 
