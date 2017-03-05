@@ -407,6 +407,14 @@
             }
         },
         {
+            "Key": "82269eb5-d604-4544-99dd-233c2e2b2c9e",
+            "Value": {
+                "id": "17420881-5dfc-4bae-98c6-4468a5d039e2",
+                "resourcePath": "objects\\objGroundNormalBig\\objGroundNormalBig.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "83656c93-8bfe-4f34-a68e-2209e7e00231",
             "Value": {
                 "id": "4c2ca457-ac6e-4613-ad30-07a3f0524beb",
