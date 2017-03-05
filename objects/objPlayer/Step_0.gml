@@ -526,6 +526,11 @@ if (place_meeting(x,y+1,objSolid))
 	blockInstance = instance_position(x,y+1,objSolid);
 	if (blockInstance != noone)
 	{
+		if (onGround && !wasOnGround)
+		{
+			//	y = blockInstance.y - sprite_get_height(blockInstance.sprite_index) + sprite_get_bbox_top(blockInstance.sprite_index) - 1;
+		}
+		
 		newSquish = 1;
 		if (onGround)
 		{
@@ -543,6 +548,11 @@ if (place_meeting(x-16,y+1,objSolid))
 	blockInstance = instance_position(x-16,y+1,objSolid);
 	if (blockInstance != noone)
 	{
+		if (onGround && !wasOnGround)
+		{
+			//y = blockInstance.y - sprite_get_height(blockInstance.sprite_index) + sprite_get_bbox_top(blockInstance.sprite_index) - 1;
+		}
+	
 		newSquish = 1;
 		if (onGround)
 		{
@@ -560,6 +570,11 @@ if (place_meeting(x+16,y+1,objSolid))
 	blockInstance = instance_position(x+16,y+1,objSolid);
 	if (blockInstance != noone)
 	{
+		if (onGround && !wasOnGround)
+		{
+			//	y = blockInstance.y - sprite_get_height(blockInstance.sprite_index) + sprite_get_bbox_top(blockInstance.sprite_index) - 1;
+		}
+		
 		newSquish = 1;
 		if (onGround)
 		{
