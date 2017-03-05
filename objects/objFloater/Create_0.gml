@@ -1,6 +1,6 @@
 event_inherited();
 
-onHitRecoil = 10;
+onHitRecoil = 1;
 
 
 bounceOnContact = true;
