@@ -48,7 +48,7 @@
         },
         {
             "id": "1bd2aa4c-2bbe-4110-ac61-a5170c0a8526",
-            "modelName": "GMPoint",
+           "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 64,
             "y": 6
