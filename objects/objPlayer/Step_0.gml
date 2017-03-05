@@ -314,8 +314,10 @@ if (isRunning)
 	{
 		alarm[footstepSoundTimer] = footstepSoundDelay;
 		//TRIGGER SOUND HERE DOOOOG
-		
-		
+		if(onGround)
+		{
+		audio_play_sound(choose(sfx_step_01,sfx_step_02,sfx_step_03,sfx_step_04,sfx_step_05),1,0);
+		}
 	}
 }
 
