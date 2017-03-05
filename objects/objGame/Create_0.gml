@@ -1,5 +1,5 @@
 /// Create miners
-
+global.playerScore = 0;
 global.playerInstance = noone;
 
 randomize();

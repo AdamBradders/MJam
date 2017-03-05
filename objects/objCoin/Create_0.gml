@@ -1,5 +1,7 @@
 event_inherited();
 
+coinValue = 10;
+
 m = 5;
 
 vxMax       = 0.02  * m;
