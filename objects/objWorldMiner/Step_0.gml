@@ -9,12 +9,12 @@ if (numberOfMoves > 0)
 		{
 			if (!place_meeting(x+32,y,objSolid) && !place_meeting(x,y+32,objSolid) && !place_meeting(x+32,y+32,objSolid))
 			{
-				groundTile = instance_create_layer(x,y,"Instances",objGroundNormalBig);
+				groundTile = instance_create_layer(x,y,"Instances",random(1) < likelyhoodIsGold ? objGroundGoldBig : objGroundNormalBig);
 			}
 		}
 		else
 		{
-			groundTile = instance_create_layer(x,y,"Instances",objGroundNormal);
+			groundTile = instance_create_layer(x,y,"Instances",random(1) < likelyhoodIsGold ? objGroundGold : objGroundNormal);
 			numberOfMoves--;
 		}
 		

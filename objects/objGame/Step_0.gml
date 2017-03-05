@@ -89,20 +89,21 @@ if (levelGenerationComplete == false)
 		global.portals[0] = instance_create_layer(xPos,yPos-portalVerticalOffset*32,"instance_portals",objPortal);
 				
 		//Kill blocks around portal
-		//for (iX=0;iX<portalHorizontalOffset;iX++)
-		//{
-		//	for (iY=0;iY<portalVerticalOffset;iY++)
-		//	{
-		//		startX = xPos-(portalHorizontalOffset*32*0.5);
-		//		startY = yPos-(portalVerticalOffset*32) - (portalVerticalOffset*32*0.5);
+		for (iX=0;iX<portalHorizontalOffset;iX++)
+		{
+			for (iY=0;iY<portalVerticalOffset;iY++)
+			{
+				startX = xPos-(portalHorizontalOffset*32*0.5);
+				startY = yPos-(portalVerticalOffset*32) - (portalVerticalOffset*32*0.5);
 				
-		//		block = instance_position(startX+(iX*32),startY+(iY*32),objSolid);
-		//		if (block != noone)
-		//		{
-		//			instance_destroy(block);
-		//		}
-		//	}
-		//}
+				block = instance_position(startX+(iX*32),startY+(iY*32),objSolid);
+				if (block != noone)
+				{
+					show_debug_message("PORTAL CLEARED A BLOCK!!");
+					instance_destroy(block);
+				}
+			}
+		}
 		
 		camera_set_view_target(view_camera[0],global.portals[0]);
 		alarm[0] = portalPreSpawnTime;
