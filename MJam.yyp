@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "25e7bea5-33d3-4799-a529-9d782e056cda",
+            "Value": {
+                "id": "65b97b5c-541e-4e34-a697-0a896cf079af",
+                "resourcePath": "sprites\\sprBomb\\sprBomb.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "292e7ad7-f5ae-48e8-a5a0-031308333cb6",
             "Value": {
                 "id": "1533f016-cb60-4281-bf8e-45b142355914",
@@ -407,6 +415,14 @@
             }
         },
         {
+            "Key": "700d9a59-725b-43b7-8b6d-b1d537f90378",
+            "Value": {
+                "id": "f35d2642-cebd-403a-a737-2d5d586ce0d5",
+                "resourcePath": "sprites\\sprSplashDamageLarge\\sprSplashDamageLarge.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "704a8ad3-66e7-46ca-9fae-98ce107d1012",
             "Value": {
                 "id": "6d3b0677-1951-4cd8-aa8b-100931f1f4c7",
@@ -475,14 +491,6 @@
             "Value": {
                 "id": "943a2f8b-f09a-4124-9881-80cd6ae3f1c0",
                 "resourcePath": "sprites\\sprTestTileBigRareDMG_02\\sprTestTileBigRareDMG_02.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "868e6eed-1b56-4490-9b23-dc0be91db570",
-            "Value": {
-                "id": "0c798432-bb36-4b07-a331-09623fab9b63",
-                "resourcePath": "sprites\\sprSpitterBullet\\sprSpitterBullet.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -667,6 +675,14 @@
             "Value": {
                 "id": "2e2f1de9-b247-4f88-b03e-0b4388350b16",
                 "resourcePath": "sprites\\CircleMan\\CircleMan.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bec9aac7-95c3-4205-8194-6d20bf2fd166",
+            "Value": {
+                "id": "32a76030-e004-4dc4-8a48-e578ec670a35",
+                "resourcePath": "sprites\\sprSpitterBullet\\sprSpitterBullet.yy",
                 "resourceType": "GMSprite"
             }
         },
