@@ -7,6 +7,9 @@ randomize();
 numberOfMiners = 15;
 
 global.worldMarginSizeInTiles = 5;
+portalPreSpawnTime = 3 * room_speed;
+portalVerticalOffset = 4; //3 tiles up
+portalHorizontalOffset = 6; //3 tiles up
 
 i = numberOfMiners;
 repeat(numberOfMiners)

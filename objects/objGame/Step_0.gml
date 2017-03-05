@@ -79,6 +79,32 @@ if (levelGenerationComplete == false)
 			}
 			yClear-= 32;
 		}
-		global.playerInstance = instance_create_layer(xPos,yPos,"Instances",objPlayer);
+		
+		//Spawn the portal
+		global.portalStartX = xPos;
+		global.portalStartY = yPos;
+		
+		//Set the camera to this position
+		camera_set_view_pos(view_camera[0],xPos - (view_wport[0] * 0.5),yPos - (view_hport[0] * 0.5));
+		global.portals[0] = instance_create_layer(xPos,yPos-portalVerticalOffset*32,"instance_portals",objPortal);
+				
+		//Kill blocks around portal
+		for (iX=0;iX<portalHorizontalOffset;iX++)
+		{
+			for (iY=0;iY<portalVerticalOffset;iY++)
+			{
+				startX = xPos-(portalHorizontalOffset*32*0.5);
+				startY = yPos-(portalVerticalOffset*32) - (portalVerticalOffset*32*0.5);
+				
+				block = instance_position(startX+(iX*32),startY+(iY*32),objSolid);
+				if (block != noone)
+				{
+					instance_destroy(block);
+				}
+			}
+		}
+		
+		camera_set_view_target(view_camera[0],global.portals[0]);
+		alarm[0] = portalPreSpawnTime;
 	}
 }

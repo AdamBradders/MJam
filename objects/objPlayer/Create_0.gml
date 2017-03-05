@@ -2,7 +2,7 @@
 energyBarXOffset = 0;
 energyBarYOffset = -40;
 
-energyBar = instance_create_layer(x+energyBarXOffset,y+energyBarYOffset,"Instances",objEnergyBar);
+energyBar = instance_create_layer(x+energyBarXOffset,y+energyBarYOffset,"instance_overlay",objEnergyBar);
 
 // Inherit objEntity variables
 event_inherited();
