@@ -20,7 +20,13 @@
         "6f51b07e-91e3-4ae3-84ef-e6ee5f1de16f",
         "7f117499-aaca-4d33-91e7-0346d238d8fd",
         "969f6443-c3e7-4d72-beaa-9cf8fcd13ed5",
-        "5553430b-56ab-448a-9dbe-8905e9c3e328"
+        "5553430b-56ab-448a-9dbe-8905e9c3e328",
+        "16dfd111-839a-445d-8e73-c7e6a10518a4",
+        "5e2c8570-af0b-417b-bf4b-c422cc2dd5b3",
+        "84d2f514-dd07-49d5-9be8-873d4603272f",
+        "aa0425d8-b510-4e47-8322-357976e2840d",
+        "0461b906-67b6-46cc-8e8e-fcd2b5761cf6",
+        "00f9935e-c93e-4f93-8a52-040367991f5a"
     ],
     "filterType": "GMSprite",
     "folderName": "World",
