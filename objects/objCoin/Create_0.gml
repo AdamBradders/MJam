@@ -1,7 +1,7 @@
 event_inherited();
 
-m = 1.0;
+m = 0.3;
 
-vxMax       = 6.5  * m;
-vyMax       = 10.0 * m;
+vxMax       = 1.3  * m;
+vyMax       = 4.5 * m;
 gravNorm    = 0.5  * m;
