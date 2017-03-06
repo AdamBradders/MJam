@@ -4,8 +4,8 @@ event_inherited();
 
 angle = 0;
 
-initialXScale = 2;
-initialYScale = 2;
+initialXScale = 1;
+initialYScale = 1;
 scaleIncreaseRateX = 0.4;
 scaleIncreaseRateY = 0.4;
 
