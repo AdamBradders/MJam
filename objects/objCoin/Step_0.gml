@@ -18,11 +18,11 @@ if (distance_to_object(objPlayer) <100)
 	
 // Friction? Maybe? I dunno - Mik
 
-if abs(speed) > 0
-   {
-   friction=600;
-   }
-else
-   {
-   friction=0;
-   }
+//if abs(speed) > 0
+   //{
+   //friction=600;
+   //}
+//else
+   //{
+   //friction=0;
+   //}
