@@ -80,6 +80,7 @@ if (isRapidFiring && alarm[shootingCooldownTimer] < 0)
 	bullet = instance_create_layer(x,y -16,"Instances",objPlayerBullet);
 	bulletSpeed = 18;
 	
+	
 	bullet.x = x - (16*sin(degtorad(angle)));
 	bullet.y = y - (16*cos(degtorad(angle)));
 	bullet.vx = bulletSpeed * sin(degtorad(angle+180));
@@ -141,6 +142,8 @@ if (kFireReleased)
 		{
 			bullet = instance_create_layer(x,y -16,"Instances",objPlayerBullet);
 			bulletSpeed = 18;
+			
+			
 	
 			if (!isFlying)
 			{

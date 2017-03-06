@@ -671,6 +671,14 @@
             }
         },
         {
+            "Key": "ab3676b0-7e21-4b60-b9bf-23df7ca6b6c9",
+            "Value": {
+                "id": "1584fda9-572b-43f2-a477-2bc454afadea",
+                "resourcePath": "objects\\objAudio\\objAudio.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "ae7bab83-0d07-40fd-ba80-b3ad4964cd75",
             "Value": {
                 "id": "29a18a9f-a427-43e5-ab9d-c45b5f6203bd",
@@ -756,6 +764,14 @@
                 "id": "32a76030-e004-4dc4-8a48-e578ec670a35",
                 "resourcePath": "sprites\\sprSpitterBullet\\sprSpitterBullet.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bf480e2e-be63-452f-8ea5-0317a93d342e",
+            "Value": {
+                "id": "59805b94-91f8-4cfb-a006-58b9f6c466c4",
+                "resourcePath": "objects\\obj_part2_GunSmoke\\obj_part2_GunSmoke.yy",
+                "resourceType": "GMObject"
             }
         },
         {
