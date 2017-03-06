@@ -9,4 +9,5 @@ alarm[1] = hitFrameTime;
 if (hp <= 0)
 {
 	instance_destroy(id);
+	instance_create_depth(x,y,0,obj_particleTest);
 }
