@@ -591,6 +591,14 @@
             }
         },
         {
+            "Key": "897a643d-51de-4fe1-b9b5-216de7afa0a5",
+            "Value": {
+                "id": "37efa0e3-f262-4ef0-8bd2-80580d29a99b",
+                "resourcePath": "objects\\objFloaterBullet\\objFloaterBullet.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8f617633-1763-42d3-9220-4e0607ac91c0",
             "Value": {
                 "id": "21247477-12a2-43a7-85dd-2c6ca2eff223",
