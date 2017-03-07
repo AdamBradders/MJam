@@ -9,6 +9,7 @@ likelyhoodHorizontal = 1.4;
 likelyhoodVertical = 1;
 likelyhoodBigTile = 0.1; //1 in 10
 likelyhoodIsGold = 0.05;
+likelyhoodRareTile = 0.01;
 
 
 //DON'T FUCK WITH THIS SHIZ UNLESS YOU REALLY REALLY WANNA
@@ -16,3 +17,4 @@ numberOfMoves = round(minimumNumberOfMoves+random(maximumNumberOfMoves-minimumNu
 
 previousWasBigTile = false;
 bigTile = false;
+rareTile = false;

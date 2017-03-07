@@ -5,7 +5,15 @@ if (numberOfMoves > 0)
 	//Place a world tile...
 	if (!place_meeting(x,y,objSolid))
 	{
-		if (bigTile)
+		if (rareTile)
+		{
+			if (!place_meeting(x+32,y,objSolid) && !place_meeting(x,y+32,objSolid) && !place_meeting(x+32,y+32,objSolid))
+			{
+				groundTile = instance_create_layer(x,y,"Instances", objGroundRareBig);
+				global.rareTileCount++;
+			}
+		}
+		else if (bigTile)
 		{
 			if (!place_meeting(x+32,y,objSolid) && !place_meeting(x,y+32,objSolid) && !place_meeting(x+32,y+32,objSolid))
 			{
@@ -21,7 +29,9 @@ if (numberOfMoves > 0)
 		previousWasBigTile = bigTile;
 	}
 	
-	bigTile = random(1) <= likelyhoodBigTile;
+	rareTile = random(1) <= likelyhoodRareTile && global.rareTileCount < global.maxRareTilesPerLevel;
+
+	bigTile = random(1) <= likelyhoodBigTile || rareTile;
 	
 	//choose a direction at random
 	//Favour horizontal or vertical?

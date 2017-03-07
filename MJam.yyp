@@ -575,6 +575,14 @@
             }
         },
         {
+            "Key": "87446b5d-64b1-4bbc-bbbc-0435c6d17e20",
+            "Value": {
+                "id": "627f53b4-212e-4207-b8a2-7c02aa23cf9d",
+                "resourcePath": "objects\\objCoinRare\\objCoinRare.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "881f8e71-6a01-42e5-87f3-3391bfef34c7",
             "Value": {
                 "id": "78603f70-1d45-4f9c-b2e2-87175e5f77a4",
@@ -908,6 +916,14 @@
                 "id": "d1121b87-8acc-4076-9c6f-f84f4fb8bc0b",
                 "resourcePath": "views\\d9f8cdf1-6846-4e5f-9b95-39124a276d85.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "dc411bb4-26c3-4efc-a751-cc3e96f048e8",
+            "Value": {
+                "id": "0115ab1a-2fba-41e1-90a4-9687b120c1b6",
+                "resourcePath": "objects\\objGroundRareBig\\objGroundRareBig.yy",
+                "resourceType": "GMObject"
             }
         },
         {

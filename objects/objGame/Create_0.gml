@@ -1,6 +1,8 @@
 /// Create miners
 global.playerScore = 0;
 global.playerInstance = noone;
+global.maxRareTilesPerLevel = 1;
+global.rareTileCount = 0;
 
 randomize();
 //Alternativly use the line below to force the same level generation every time
