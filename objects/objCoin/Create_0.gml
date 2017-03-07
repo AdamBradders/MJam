@@ -1,5 +1,8 @@
 event_inherited();
 
+attractDistance = 10 * 32;
+attactSpeed = 10;
+attactGravity = 0.5;
 coinValue = 10;
 
 // what the FUCK does this mean?
