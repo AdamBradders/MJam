@@ -5,3 +5,4 @@ maxPortalPolice = 20;
 
 alarm[0] = prePoliceTime;
 
+isExit = false;

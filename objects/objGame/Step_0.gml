@@ -85,20 +85,20 @@ if (levelGenerationComplete == false)
 		}
 		
 		//Clear all blocks upwards from this point
-		xClear = block.x;
-		yClear = block.y-32;
-		while (yClear >= 0)
-		{
-			if (!place_meeting(xClear,yClear,objSolid))
-			{
-				blockToKill = instance_position(xClear,yClear,objSolid);
-				if (blockToKill != noone)
-				{
-					instance_destroy(blockToKill);
-				}
-			}
-			yClear-= 32;
-		}
+		//xClear = block.x;
+		//yClear = block.y-32;
+		//while (yClear >= 0)
+		//{
+		//	if (!place_meeting(xClear,yClear,objSolid))
+		//	{
+		//		blockToKill = instance_position(xClear,yClear,objSolid);
+		//		if (blockToKill != noone)
+		//		{
+		//			instance_destroy(blockToKill);
+		//		}
+		//	}
+		//	yClear-= 32;
+		//}
 		
 		//Spawn the portal
 		global.portalStartX = xPos;
@@ -107,6 +107,39 @@ if (levelGenerationComplete == false)
 		//Set the camera to this position
 		//camera_set_view_pos(view_camera[0],global.portalStartX - (view_wport[0] * 0.5),global.portalStartY - (portalVerticalOffset*32) - (view_hport[0] * 0.5));
 		camera_set_view_target(view_camera[0],instance_create_layer(xPos,yPos-portalVerticalOffset*32,"Instances",objPortalDummy));
+		
+		//Find exit position
+		xPos = 0;
+		yPos = 0;
+		
+		//Find a start position for the player
+		numberOfSolidBlocks = instance_number(objSolid);
+		i = 0;
+		repeat (numberOfSolidBlocks)
+		{
+			block = instance_find(objSolid,i++);
+			if (!place_meeting(block.x,block.y-32,objSolid))
+			{
+				
+				//this is a free space right above a solid block, place our player here!
+				xPos = block.x + 16;
+				yPos = block.y - 30;
+				if (point_distance(xPos,yPos,global.portalStartX, global.portalStartY) > 100*32)
+				{
+					break;
+				}
+			}
+				
+		}
+		
+				
+		//Spawn the exit portal
+		{
+			explodeRadius = 5 * 32;
+			//Spawn the portal and clear area around it...
+			global.portals[1] = instance_create_layer(xPos,yPos,"instance_portals",objPortal);
+			global.portals[1].isExit = true;
+		}
 		
 		//////////////////////////////////////////////////
 		//Create all the bad dudes////////////////////////
