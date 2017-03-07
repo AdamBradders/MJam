@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "07ba86fb-86e1-4b91-9949-02455f40a82b",
+            "Value": {
+                "id": "0b931ec7-e952-474e-bf44-1e06d11b0b97",
+                "resourcePath": "objects\\objGameDummy\\objGameDummy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0927bf37-4485-49e1-8c02-0eecf40d5418",
             "Value": {
                 "id": "bf8e7f68-c48e-4349-acd6-d064f7f9021a",
@@ -226,7 +234,7 @@
             "Key": "292e7ad7-f5ae-48e8-a5a0-031308333cb6",
             "Value": {
                 "id": "1533f016-cb60-4281-bf8e-45b142355914",
-                "resourcePath": "rooms\\levelGeneratorTest\\levelGeneratorTest.yy",
+                "resourcePath": "rooms\\boidsTest\\boidsTest.yy",
                 "resourceType": "GMRoom"
             }
         },
@@ -847,6 +855,14 @@
             }
         },
         {
+            "Key": "bea4ed66-d332-4b6c-9b23-1c6ce1b9431b",
+            "Value": {
+                "id": "53d9d905-9bc5-4d6c-abba-f18c30e856da",
+                "resourcePath": "sprites\\sprBoid\\sprBoid.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bec9aac7-95c3-4205-8194-6d20bf2fd166",
             "Value": {
                 "id": "32a76030-e004-4dc4-8a48-e578ec670a35",
@@ -964,6 +980,14 @@
                 "id": "d1121b87-8acc-4076-9c6f-f84f4fb8bc0b",
                 "resourcePath": "views\\d9f8cdf1-6846-4e5f-9b95-39124a276d85.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "da920003-a88e-4a65-8e7a-a7b850c8fa6b",
+            "Value": {
+                "id": "e1ed405d-3f67-40ca-9064-071e8661934c",
+                "resourcePath": "objects\\objBoid\\objBoid.yy",
+                "resourceType": "GMObject"
             }
         },
         {

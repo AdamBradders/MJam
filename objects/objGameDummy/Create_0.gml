@@ -1,0 +1,1 @@
+global.playerInstance = noone;

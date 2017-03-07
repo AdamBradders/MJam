@@ -65,17 +65,18 @@ repeat (ds_list_size(global.portalPolice))
 }
 
 wallCount = 0;
-//ids = get_ids_region(objSolid,x-neighbourRadius*0.5,y-neighbourRadius*0.5,x+neighbourRadius*0.5,y+neighbourRadius*0.5);
-//for (j=0;j<array_length_1d(ids);j++)
-//{
-//	if (ids[j] == noone)
-//	{
-//		continue;
-//	}
-//	seperationX += x - ids[j].x;
-//	seperationY += y - ids[j].y;
-//	++wallCount;
-//}
+
+ids = get_ids_region(objSolid,x-neighbourRadius*0.5,y-neighbourRadius*0.5,x+neighbourRadius*0.5,y+neighbourRadius*0.5);
+for (j=0;j<array_length_1d(ids);j++)
+{
+	if (ids[j] == noone)
+	{
+		continue;
+	}
+	seperationX += x - ids[j].x;
+	seperationY += y - ids[j].y;
+	++wallCount;
+}
 
 if (neighbourCount > 0)
 {	
@@ -111,10 +112,10 @@ if (neighbourCount > 0)
 }
 
 
-seperationWeight = 0.35;
-alignmentWeight = 0.1;
-cohesionWeight = 0.1;
-goalWeight = 1 - seperationWeight - alignmentWeight - cohesionWeight;
+seperationWeight = 1;//0.35;
+alignmentWeight = 1;
+cohesionWeight = 1;
+goalWeight = 0;//1 - seperationWeight - alignmentWeight - cohesionWeight;
 
 targetVX += sin(degtorad(angle)) * goalWeight;
 targetVY += cos(degtorad(angle)) * goalWeight;
@@ -131,6 +132,18 @@ if (magnitude != 0)
 	targetVX /= magnitude;
 	targetVY /= magnitude;
 }
-maxSpeed = 3;
+
 vx = lerp(vx,targetVX * maxSpeed,0.1);
 vy = lerp(vy,targetVY * maxSpeed,0.1);
+
+magnitude = sqrt(vx*vx + vy*vy);
+if (magnitude != 0)
+{
+
+	vxNorm = vx/magnitude;
+	vyNorm = vy/magnitude;
+			
+	dp = dot_product(0,1,vxNorm,vyNorm);
+	cross_product = dot_product(0,1, -vyNorm,vxNorm);
+	angle = cross_product > 0 ? radtodeg(arccos(dp)) : 360- radtodeg(arccos(dp));
+}

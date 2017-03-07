@@ -1,4 +1,4 @@
-prePoliceTime = 5 * room_speed;
+prePoliceTime = 10 * room_speed;
 policeSpawnTime = 1 * room_speed;
 
 maxPortalPolice = 20;

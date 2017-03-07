@@ -5,6 +5,7 @@ global.playerScore = 0;
 global.playerInstance = noone;
 global.maxRareTilesPerLevel = 1;
 global.rareTileCount = 0;
+global.levelGenEnabled = true;
 
 camZoomSpeed = 60;
 
@@ -26,13 +27,16 @@ portalVerticalOffset = 4;
 portalVerticalClear = 4*32;
 portalHorizontalClear = 6*32;
 
-i = numberOfMiners;
-repeat(numberOfMiners)
+if (global.levelGenEnabled)
 {
-	margin = ((global.worldMarginSizeInTiles+1)*32);
-	randomX = margin + floor(random(room_width-margin*2));
-	randomY = margin + floor(random(room_height-margin*2));
-	minerInstances[--i] = instance_create_layer(randomX,randomY,"Instances",objWorldMiner);
+	i = numberOfMiners;
+	repeat(numberOfMiners)
+	{
+		margin = ((global.worldMarginSizeInTiles+1)*32);
+		randomX = margin + floor(random(room_width-margin*2));
+		randomY = margin + floor(random(room_height-margin*2));
+		minerInstances[--i] = instance_create_layer(randomX,randomY,"Instances",objWorldMiner);
+	}
 }
 
 levelGenerationComplete = false;

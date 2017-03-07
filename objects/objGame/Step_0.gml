@@ -1,3 +1,8 @@
+if (global.levelGenEnabled == false)
+{
+	return;
+}
+
 if (global.roomNeedsRestart && alarm[1] < 0)
 {
 	alarm[1] = room_restart_time;
