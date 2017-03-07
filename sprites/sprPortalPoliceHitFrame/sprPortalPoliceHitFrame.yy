@@ -10,7 +10,7 @@
     "bbox_left": 0,
     "bbox_right": 63,
     "bbox_top": 0,
-    "bboxmode": 0,
+    "bboxmode": 1,
     "colkind": 1,
     "coltolerance": 0,
     "frames": [
@@ -75,7 +75,7 @@
             "visible": true
         }
     ],
-    "origin": 9,
+    "origin": 4,
     "playbackSpeed": 15,
     "playbackSpeedType": 0,
     "sepmasks": false,
@@ -84,6 +84,6 @@
     "textureGroup": 0,
     "type": 0,
     "width": 64,
-    "xorig": -27,
-    "yorig": 7
+    "xorig": 32,
+    "yorig": 32
 }

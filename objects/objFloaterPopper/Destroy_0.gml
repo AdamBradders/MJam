@@ -1,5 +1,7 @@
 //Spit out some bullets
 
+	instance_create_depth(x,y,0,obj_part1_Popper);
+
 angle = 45;
 
 repeat (4)

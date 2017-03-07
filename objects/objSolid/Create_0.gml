@@ -6,3 +6,5 @@ squishOnLand = 0.5;
 
 currentSquish = 1;
 squishRate = 0.3;
+
+attachedBomb = noone;

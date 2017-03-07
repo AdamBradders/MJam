@@ -1,4 +1,4 @@
 instance_destroy(global.energyBarUIObject);
 global.energyBarUIObject = noone;
-
-room_restart();
+global.roomNeedsRestart = true;
+global.playerInstance = noone;

@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "0927bf37-4485-49e1-8c02-0eecf40d5418",
+            "Value": {
+                "id": "bf8e7f68-c48e-4349-acd6-d064f7f9021a",
+                "resourcePath": "objects\\objPortalDummy\\objPortalDummy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0e07efcd-20c6-445f-9a62-9b0ecc8398b9",
             "Value": {
                 "id": "614524e3-93ef-465e-a76d-04131b7798cb",
@@ -164,6 +172,14 @@
                 "id": "7843ca60-8293-4d82-af23-36a21fc85fa8",
                 "resourcePath": "sprites\\sprTestTileDMG_01\\sprTestTileDMG_01.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "2028682f-c409-4fb8-bb2f-4c459e9a93c2",
+            "Value": {
+                "id": "4a9fc5aa-99ed-4ab2-8d68-0ea14e78dd86",
+                "resourcePath": "objects\\obj_Bomb_SplashDamage\\obj_Bomb_SplashDamage.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -319,11 +335,11 @@
             }
         },
         {
-            "Key": "461373ab-724e-4706-b55a-f2592ef4005b",
+            "Key": "47b11613-cc9e-4b86-92ba-802e4e88239b",
             "Value": {
-                "id": "8688f0c6-5b82-46e0-98b0-fd2163fef6ef",
-                "resourcePath": "objects\\objSpitter\\objSpitter.yy",
-                "resourceType": "GMObject"
+                "id": "a4021842-d941-4b59-8f63-c8ea8a226345",
+                "resourcePath": "scripts\\get_ids_region\\get_ids_region.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -428,6 +444,14 @@
                 "id": "125ca543-fe94-4550-865d-9485fdc245e1",
                 "resourcePath": "sprites\\sprTestTileGoldDMG_02\\sprTestTileGoldDMG_02.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6817b803-346f-4c3d-a5f4-7c7822c55247",
+            "Value": {
+                "id": "865cad3c-cc9b-4423-88bc-30864dc03f9e",
+                "resourcePath": "objects\\objWallSpitter\\objWallSpitter.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -815,6 +839,14 @@
             }
         },
         {
+            "Key": "bd967b33-5b26-4cfc-8d47-365dddc4222a",
+            "Value": {
+                "id": "6df35e7d-e627-4219-ad95-d497c8f275ab",
+                "resourcePath": "objects\\obj_part1_Popper\\obj_part1_Popper.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "bec9aac7-95c3-4205-8194-6d20bf2fd166",
             "Value": {
                 "id": "32a76030-e004-4dc4-8a48-e578ec670a35",
@@ -903,6 +935,14 @@
             }
         },
         {
+            "Key": "d0632ac2-f43e-4c96-9a14-7984080707ea",
+            "Value": {
+                "id": "ed3f1b18-c283-449d-99fd-c10b1c2e6613",
+                "resourcePath": "objects\\objBomb\\objBomb.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d256f90e-de33-4fc3-912a-045a3419b81b",
             "Value": {
                 "id": "49d24c19-35b5-4924-855c-1c9380244ea1",
@@ -931,6 +971,14 @@
             "Value": {
                 "id": "0115ab1a-2fba-41e1-90a4-9687b120c1b6",
                 "resourcePath": "objects\\objGroundRareBig\\objGroundRareBig.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "dd3faa98-87d2-4765-a6e4-96d2b9c74150",
+            "Value": {
+                "id": "1360bd82-f88e-4130-b09c-4e09f5905a03",
+                "resourcePath": "objects\\objSpitterBullet\\objSpitterBullet.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1034,6 +1082,7 @@
     "script_order": [
         "8f617633-1763-42d3-9220-4e0607ac91c0",
         "7d9f8383-ecfb-4822-9b65-d7d701364b4c",
+        "47b11613-cc9e-4b86-92ba-802e4e88239b",
         "60e40456-75a5-4033-8000-d5bcce8c3f9a"
     ],
     "tutorial": ""

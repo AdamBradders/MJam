@@ -23,6 +23,16 @@
             "enumb": 0,
             "eventtype": 0,
             "m_owner": "82269eb5-d604-4544-99dd-233c2e2b2c9e"
+        },
+        {
+            "id": "32a39a23-8013-48d4-a9cc-2defa1e2ca3f",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 1,
+            "m_owner": "82269eb5-d604-4544-99dd-233c2e2b2c9e"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -48,7 +58,7 @@
         },
         {
             "id": "1bd2aa4c-2bbe-4110-ac61-a5170c0a8526",
-           "modelName": "GMPoint",
+            "modelName": "GMPoint",
             "mvc": "1.0",
             "x": 64,
             "y": 6

@@ -1,8 +1,8 @@
 {
-    "id": "461373ab-724e-4706-b55a-f2592ef4005b",
+    "id": "0927bf37-4485-49e1-8c02-0eecf40d5418",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "objSpitter",
+    "name": "objPortalDummy",
     "eventList": [
         
     ],
@@ -22,6 +22,6 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "solid": false,
-    "spriteId": "1dc4453e-101c-42c9-98bf-72b0f059a38a",
+    "spriteId": "00000000-0000-0000-0000-000000000000",
     "visible": true
 }

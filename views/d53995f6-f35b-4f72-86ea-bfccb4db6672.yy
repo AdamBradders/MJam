@@ -6,7 +6,8 @@
     "children": [
         "2ec91740-9a03-42a9-aa45-685768e419fc",
         "724c72a2-d58c-455a-94c4-731437070d22",
-        "897a643d-51de-4fe1-b9b5-216de7afa0a5"
+        "897a643d-51de-4fe1-b9b5-216de7afa0a5",
+        "dd3faa98-87d2-4765-a6e4-96d2b9c74150"
     ],
     "filterType": "GMObject",
     "folderName": "Projectiles",

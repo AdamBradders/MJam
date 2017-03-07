@@ -1,8 +1,16 @@
 /// Create miners
+global.portalPolice = ds_list_create();
+global.roomNeedsRestart = false;
 global.playerScore = 0;
 global.playerInstance = noone;
 global.maxRareTilesPerLevel = 1;
 global.rareTileCount = 0;
+
+camZoomSpeed = 60;
+
+camSizeW = camera_get_view_width(view_camera[0]);
+camSizeH = camera_get_view_height(view_camera[0]);
+camera_set_view_size(view_camera[0], room_width, room_height);
 
 randomize();
 //Alternativly use the line below to force the same level generation every time
@@ -10,10 +18,13 @@ randomize();
 
 numberOfMiners = 20;
 
+room_restart_time = 3 * room_speed; //time to delay before restarting on player death
+
 global.worldMarginSizeInTiles = 5;
 portalPreSpawnTime = 3 * room_speed;
-portalVerticalOffset = 4; //3 tiles up
-portalHorizontalOffset = 6; //3 tiles up
+portalVerticalOffset = 4;
+portalVerticalClear = 4*32;
+portalHorizontalClear = 6*32;
 
 i = numberOfMiners;
 repeat(numberOfMiners)
@@ -25,3 +36,5 @@ repeat(numberOfMiners)
 }
 
 levelGenerationComplete = false;
+
+portalStep = 0;

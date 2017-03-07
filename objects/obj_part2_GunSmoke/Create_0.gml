@@ -17,15 +17,17 @@ part_type_gravity(part2,0.005,90);
 part_type_life(part2,room_speed*1,room_speed*2);
 part_type_blend(part2,0);
 
-if (objPlayer.isFacingLeft)
+if (global.playerInstance != noone)
+{
+	if (global.playerInstance.isFacingLeft)
 	{
 		part_type_direction(part2,180,180,0,0);
 	}
 	else
-		{
-		part_type_direction(part2,0,0,0,0);
-		}
-
+	{
+	part_type_direction(part2,0,0,0,0);
+	}
+}
 
 //Particle Emitter
 part2_emit	= part_emitter_create(part2_sys);
