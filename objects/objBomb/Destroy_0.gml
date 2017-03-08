@@ -26,4 +26,5 @@ for (i=0;i<array_length_1d(ids);i++)
 {
 	instance_destroy(ids[i]);
 }
-instance_create_depth(x,y,0,obj_Bomb_SplashDamage);
+//instance_create_depth(x,y,0,obj_Bomb_SplashDamage);
+instance_create_depth(x,y,0,obj_part2_BombSmoke);
