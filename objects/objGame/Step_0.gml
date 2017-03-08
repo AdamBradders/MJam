@@ -145,7 +145,7 @@ if (levelGenerationComplete == false)
 		//Create all the bad dudes////////////////////////
 		//////////////////////////////////////////////////
 		//Floaters
-		numFloaters = 50;
+		numFloaters = 20;
 		repeat (numFloaters)
 		{
 			floaterX = 0;

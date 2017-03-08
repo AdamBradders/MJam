@@ -2,13 +2,13 @@ event_inherited();
 
 attachedBlock = noone;
 
-explodeRadius = 4 * 32;
+explodeRadius = 0 * 32;
 
 onHitRecoil = 1;
 
 hp = 3;
 
-shootTriggerDistance = 5 * 32; //5 tiles
+shootTriggerDistance = 10 * 32; //5 tiles
 bulletSpeed = 4;
 shootingCooldown = 1.5 * room_speed;
 

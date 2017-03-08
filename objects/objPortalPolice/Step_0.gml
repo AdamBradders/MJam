@@ -147,3 +147,39 @@ if (magnitude != 0)
 	cross_product = dot_product(0,1, -vyNorm,vxNorm);
 	angle = cross_product > 0 ? radtodeg(arccos(dp)) : 360- radtodeg(arccos(dp));
 }
+
+// Vertical
+repeat(abs(vy)) {
+    if (!place_meeting(x, y + sign(vy), objSolid))
+        y += sign(vy); 
+    else {
+      	
+		instance = instance_place(x,y+sign(vy),objSolid);
+		if (instance != noone)
+		{
+			instance.hp--;
+		}
+		 
+		instance_destroy(id);
+	
+        break;
+    }
+}
+
+// Horizontal
+repeat(abs(vx)) {
+    if (!place_meeting(x + sign(vx), y, objSolid))
+        x += sign(vx); 
+    else {
+		
+		instance = instance_place(x+sign(vx),y,objSolid);
+		if (instance != noone)
+		{
+			instance.hp--;
+		}
+		
+		instance_destroy(id);
+		 
+        break;
+    }
+}
