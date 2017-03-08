@@ -9,8 +9,8 @@ onHitRecoil = 1;
 hp = 3;
 
 shootTriggerDistance = 5 * 32; //5 tiles
-bulletSpeed = 18;
-shootingCooldown = 0.3 * room_speed;
+bulletSpeed = 4;
+shootingCooldown = 1.5 * room_speed;
 
 isShooting = false;
 
