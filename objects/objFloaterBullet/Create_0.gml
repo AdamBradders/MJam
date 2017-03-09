@@ -2,7 +2,7 @@
 // Inherit objEntity variables
 event_inherited();
 
-bulletSpeed = 18;
+bulletSpeed = 8;
 
 angle = 0;
 

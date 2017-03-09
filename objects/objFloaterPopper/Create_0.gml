@@ -6,14 +6,14 @@ onHitRecoil = 1;
 bounceOnContact = true;
 bounceCoeff = 0.8;
 
-hp = 3;
+hp = 1;
 
 moveSquish = 0.5;
 bulletHitSquish = 0.1;
 squishRate = 0.1;
 
-moveThrust = 4;
-moveFric = 0.1;
+moveThrust = 6;
+moveFric = 0.2;
 
 moveTriggerDistance = 10 * 32; //10 tiles
 

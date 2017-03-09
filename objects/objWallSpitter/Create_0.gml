@@ -33,7 +33,7 @@ breathingRateIdle = 8;
 breathingRateRunning = 40;
 breathingRate = breathingRateIdle;
 
-hitFrameTime = 0.3 * room_speed;
+hitFrameTime = 0.1 * room_speed;
 squishRate = 0.1;
 
 angle = 0;

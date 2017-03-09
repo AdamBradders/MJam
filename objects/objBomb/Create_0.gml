@@ -2,7 +2,7 @@ event_inherited();
 
 attachedBlock = noone;
 
-explodeRadius = 4 * 32;
+explodeRadius = 2 * 32;
 
 onHitRecoil = 1;
 

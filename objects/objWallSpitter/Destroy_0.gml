@@ -26,3 +26,5 @@ for (i=0;i<array_length_1d(ids);i++)
 {
 	instance_destroy(ids[i]);
 }
+
+instance_create_layer(x,y,"instances",obj_part2_SpitterDestroy);

@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "1258cb19-5017-43c5-8a53-37639ef2c485",
+            "Value": {
+                "id": "55c55c86-2992-4663-9b8a-dab63ab24379",
+                "resourcePath": "objects\\obj_part2_SpitterDestroy\\obj_part2_SpitterDestroy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "1568e7ef-0c2f-4cb3-9ef7-9124c4bb05f7",
             "Value": {
                 "id": "6e368f63-5a51-41cd-a582-d57637a3c1a9",
