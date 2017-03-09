@@ -7,7 +7,7 @@ part_system_depth(part2_sys,0);
 
 // Particle
 part2 = part_type_create();
-part_type_shape(part2,pt_shape_disk);
+part_type_sprite(part2,sprParticle,0,0,0);
 part_type_scale(part2,1,1);
 part_type_size(part2,0.2,0.4,-0.008,-0.003);
 part_type_color2(part2,make_color_rgb(238,66,102),make_color_rgb(10,15,13));

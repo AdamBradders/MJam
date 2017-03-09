@@ -15,5 +15,4 @@ currentXScale = initialXScale;
 currentYScale = initialYScale;
 
 
-instance_create_layer(x,y,"instances",obj_part2_GunSmoke);
 
