@@ -4,11 +4,12 @@
     "mvc": "1.0",
     "name": "boidsTest",
     "IsDnD": false,
-    "creationCodeFile": "",
+    "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,
     "inheritCreationOrder": false,
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
+        "9dca9268-61fb-4665-9649-edd7ffa0cb7a",
         "12f02352-4014-41cf-b197-1156d2b065e8",
         "f08ff0fa-41c4-4d55-a894-e7deaa92622a",
         "8d88463b-1187-4c8f-878a-b3123ae653ca",
@@ -46,8 +47,7 @@
         "ac46a923-5871-4d22-a298-de91480f45cf",
         "8e45faca-d228-4c77-aa28-efef3c04afad",
         "b398be68-023d-43f1-bdcb-7c30b4453f3c",
-        "2f3f2ba1-c231-4f16-87c0-b4473771ffa6",
-        "9dca9268-61fb-4665-9649-edd7ffa0cb7a"
+        "2f3f2ba1-c231-4f16-87c0-b4473771ffa6"
     ],
     "layers": [
         {
