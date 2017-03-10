@@ -1,8 +1,10 @@
 /// Create miners
+global.challengePortal = instance_find(objPortal_Challenge,0);
+global.playerInstance = noone;
+global.isChallengeRoom = global.challengePortal != noone;
 global.portalPolice = ds_list_create();
 global.roomNeedsRestart = false;
 global.playerScore = 0;
-global.playerInstance = noone;
 global.maxRareTilesPerLevel = 1;
 global.rareTileCount = 0;
 global.levelGenEnabled = true;
@@ -26,8 +28,9 @@ portalPreSpawnTime = 3 * room_speed;
 portalVerticalOffset = 4;
 portalVerticalClear = 4*32;
 portalHorizontalClear = 6*32;
+portalStep = 0;
 
-if (global.levelGenEnabled)
+if (global.levelGenEnabled && !global.isChallengeRoom)
 {
 	i = numberOfMiners;
 	repeat(numberOfMiners)
@@ -38,7 +41,12 @@ if (global.levelGenEnabled)
 		minerInstances[--i] = instance_create_layer(randomX,randomY,"Instances",objWorldMiner);
 	}
 }
-
+else if (global.isChallengeRoom)
+{
+	global.portalStartX = global.challengePortal.x;
+	global.portalStartY = global.challengePortal.y+portalVerticalOffset*32;
+	alarm[0] = portalPreSpawnTime;
+	portalStep = 1;
+}
 levelGenerationComplete = false;
 
-portalStep = 0;
