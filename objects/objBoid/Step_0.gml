@@ -40,15 +40,7 @@ for (j=0;j<array_length_1d(ids);j++)
 }
 
 mSpeed = canSee ? maxSpdCanSee : maxSpd;
-// Limit speed - you have to do this stupidness first
-// to handle negative zero;
-vxSqr = vx*vx;
-vySqr = vy*vy;
-if (vxSqr + vySqr < 0)
-{
-	show_debug_message("VXSQR WAS " + string(vxSqr + vySqr));
-}
-currentSpeed = sqrt(vxSqr + vySqr);
+currentSpeed = sqrt(vx*vx + vy*vy);
 if (currentSpeed > maxSpd)
 {
 	vx = (vx/currentSpeed)*maxSpd;
